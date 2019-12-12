@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Flow: Assign Categories inside Calm Blueprint (Optional)</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Karbon" href="../karbon/index.html" />
+    <link rel="prev" title="Calm: Marketplace" href="../calm_marketplace/calm_marketplace.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  </head><body>
+
+  <div id="navbar" class="navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/NutanixWorkshops.svg"></span>
+           </a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html"> <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Calm</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../what_is_calm/what_is_calm.html">What Is Calm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#what-is-the-state-of-things-today">What is the State of Things Today</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#managing-apps-is-increasingly-challenging">Managing Apps Is Increasingly Challenging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#how-does-nutanix-solve-this-problem">How Does Nutanix Solve This Problem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#foundation-for-enterprise-cloud">Foundation For Enterprise Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#delivering-the-enterprise-cloud-vision">Delivering the Enterprise Cloud Vision</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#delivering-the-enterprise-cloud-vision-multi-cloud">Delivering the Enterprise Cloud Vision: Multi-Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#calm-application-lifecycle-automation">Calm: Application Lifecycle Automation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#blueprints-capture-all-elements-of-the-application">Blueprints Capture All Elements of the Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#make-sense-of-complexity-in-a-visual-way">Make Sense of Complexity in a Visual Way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#blueprints-are-flexible-and-open">Blueprints Are Flexible and Open</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#blueprints-are-used-for-lifecycle-management">Blueprints Are Used for Lifecycle Management</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#calm-self-service-and-governance">Calm: Self-Service and Governance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#nutanix-marketplace-empowers-self-service">Nutanix Marketplace Empowers Self-Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#deploy-in-one-click">Deploy in One-Click</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#end-to-end-audits-and-governance">End-to-End Audits and Governance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#calm-hybrid-cloud-management">Calm: Hybrid Cloud Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#hybrid-cloud-management">Hybrid Cloud Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#deploy-across-clouds-based-on-need">Deploy across Clouds Based on Need</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#automate-empower-relax">Automate. Empower. Relax</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_enable/calm_enable.html">Calm: Enable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_enable/calm_enable.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_enable/calm_enable.html#enabling-app-management">Enabling App Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_enable/calm_enable.html#adding-active-directory">Adding Active Directory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_projects/calm_projects.html">Calm: Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_projects/calm_projects.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_projects/calm_projects.html#creating-a-project">Creating A Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_projects/calm_projects.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_linux/calm_linux.html">Calm: Linux Workloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-a-blueprint">Creating a Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-credentials">Creating Credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#defining-variables">Defining Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#adding-a-downloadable-image">Adding a Downloadable Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-services">Creating Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-the-database-service">Creating the Database Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-the-web-server-service">Creating the Web Server Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-the-load-balancer-service">Creating the Load Balancer Service</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#adding-dependencies">Adding Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#launching-and-managing-the-application">Launching and Managing the Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_win/calm_win.html">Calm: Windows Workloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#creating-the-blueprint">Creating the Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#adding-services">Adding Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#defining-package-install">Defining Package Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#launching-the-blueprint">Launching the Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#optional-scale-out-iis-tier">(Optional) Scale Out IIS Tier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#optional-managing-mssql-with-era">(Optional) Managing MSSQL with Era</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_day2/calm_day2.html">Calm: Day 2 Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#lab-setup">Lab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#scaling-out">Scaling Out</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#scaling-in">Scaling In</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#upgrading">Upgrading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#launching-and-managing-the-application">Launching and Managing the Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#optional-variable-scaling">(Optional) Variable Scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_escript/calm_escript.html">Calm: EScript and Task Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#lab-setup">Lab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#using-existing-machine-services">Using Existing Machine Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#restlist-custom-action">RESTList Custom Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#getdefaultsubnet-custom-action">GetDefaultSubnet Custom Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#running-the-custom-actions">Running the Custom Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#publishing-to-the-task-library">Publishing to the Task Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html">Calm: Marketplace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#calm-marketplace-part-1">Calm Marketplace Part 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#publishing-blueprints-from-marketplace-manager">Publishing Blueprints from Marketplace Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#cloning-blueprints-from-marketplace">Cloning Blueprints from Marketplace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#editing-cloned-blueprint">Editing Cloned Blueprint</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#calm-marketplace-part-2">Calm Marketplace Part 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#publishing-blueprints">Publishing Blueprints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#approving-blueprints">Approving Blueprints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#configuring-project-environment">Configuring Project Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#launching-blueprint-from-the-marketplace">Launching Blueprint from the Marketplace</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Optional Labs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Flow: Assign Categories inside Calm Blueprint (Optional)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#using-flow-with-calm">Using Flow with Calm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#takeaways">Takeaways</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Karbon</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html">Windows Tools VM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html#deploying-tools-vm">Deploying Tools VM</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/index.html">Karbon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../karbon/index.html#what-are-containers">What are Containers?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../karbon/index.html#container-benefits-and-issues">Container Benefits and Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../karbon/index.html#introducing-kubernetes">Introducing Kubernetes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#lab-setup">Lab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#creating-a-karbon-cluster">Creating a Karbon Cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#getting-started-with-kubectl">Getting Started with Kubectl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#deploying-an-application">Deploying an Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#accessing-wordpress">Accessing Wordpress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#exploring-logging-visualization">Exploring Logging &amp; Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#coming-soon">Coming Soon!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#takeaways">Takeaways</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#additional-kubernetes-training-resources">Additional Kubernetes Training Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/windows_tools_vm.html">Windows Tools VM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/windows_tools_vm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/windows_tools_vm.html#deploying-tools-vm">Deploying Tools VM</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/linux_tools_vm.html">Linux Tools VM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/linux_tools_vm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/linux_tools_vm.html#deploying-centos">Deploying CentOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/linux_tools_vm.html#verify-tools-install">Verify Tools Install</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><p class="caption"><span class="caption-text">Calm</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../what_is_calm/what_is_calm.html">What Is Calm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_enable/calm_enable.html">Calm: Enable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_projects/calm_projects.html">Calm: Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_linux/calm_linux.html">Calm: Linux Workloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_win/calm_win.html">Calm: Windows Workloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_day2/calm_day2.html">Calm: Day 2 Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_escript/calm_escript.html">Calm: EScript and Task Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html">Calm: Marketplace</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Optional Labs</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Flow: Assign Categories inside Calm Blueprint (Optional)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#using-flow-with-calm">Using Flow with Calm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#takeaways">Takeaways</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Karbon</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html">Windows Tools VM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/index.html">Karbon</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/windows_tools_vm.html">Windows Tools VM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/linux_tools_vm.html">Linux Tools VM</a></li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <div class="section" id="flow-assign-categories-inside-calm-blueprint-optional">
+<span id="flow-assign-categories-in-calm"></span><h1>Flow: Assign Categories inside Calm Blueprint (Optional)<a class="headerlink" href="#flow-assign-categories-inside-calm-blueprint-optional" title="Permalink to this headline">¶</a></h1>
+<p><em>The estimated time to complete this lab is 10 minutes.</em></p>
+<div class="section" id="using-flow-with-calm">
+<h2>Using Flow with Calm<a class="headerlink" href="#using-flow-with-calm" title="Permalink to this headline">¶</a></h2>
+<p>At the beginning of this lab, Calm was used to provide a multi-tier application as a basis for understanding how Flow policies can be created, applied, and monitored using existing workloads in an environment.</p>
+<p>Flow also integrates natively with Calm to define Categories at the Service (VM) level within the Calm blueprint.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Flow policies for Calm provisioned VMs should ensure that port 22 (for Linux VMs) and port 5985 (for Windows VMs) are open. This was done earlier in the lab when initially creating the <strong>AppTaskMan</strong> policy.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">First update the <em>Initials</em>-<strong>AppTaskMan</strong> security policy from <strong>Whitelist Only</strong> to <strong>Allow All</strong> for <strong>Outbound</strong> connections, as shown below.</p>
+<div class="figure">
+<img alt="../_images/46.png" src="../_images/46.png" />
+</div>
+<p>Can you explain WHY the blueprint would require additional outbound access to deploy?</p>
+<p>In a production environment, VMs from Calm could leverage either a staging category during provisioning or additional Outbound rules to specify only the hosts with which it needed to communicate to complete provisioning.</p>
+</li>
+<li><p class="first">In <strong>Prism Central</strong>, select <em class="fa fa-bars"></em> <strong>&gt; Services &gt; Calm</strong>.</p>
+</li>
+<li><p class="first">Click <img alt="blueprints" src="flow_assign_categories_in_calm/../images/blueprints.png" /> <strong>Blueprints</strong> &gt; <em>Initials</em>-<strong>TaskManager</strong> to open your existing blueprint.</p>
+</li>
+<li><p class="first">Select the <strong>WebServer</strong> service.</p>
+<div class="figure">
+<img alt="../_images/44.png" src="../_images/44.png" />
+</div>
+</li>
+<li><p class="first">On the <strong>VM</strong> tab, scroll to <strong>Categories</strong> and select the <strong>AppType:</strong><em>Initials</em>-<strong>TaskMan</strong> and <strong>AppTier:</strong><em>Initials</em>-<strong>TMWeb</strong> categories.</p>
+<div class="figure">
+<img alt="../_images/45.png" src="../_images/45.png" />
+</div>
+</li>
+<li><p class="first">Using the same method, apply the appropriate categories to the remaining services.</p>
+</li>
+<li><p class="first"><strong>Save</strong> and <strong>Launch</strong> the updated blueprint.</p>
+<p>Once application provisioning has completed, note the additional VMs detected as part of the policy.</p>
+<p>Does the application behave as expected? From the new client VM, are you able to ping the load balancer but not the database? Are you able to access the application?</p>
+<p>Integrating Flow with Calm allows automated deployment of applications that are secured as they are created.
+When an application is deployed from a blueprint the proper categories can be assigned as the VMs are created.
+As soon as a VM is powered on for the first time it will automatically be part of the right category and security policy without any manual intervention.</p>
+<p>The application of categories can be performed programmatically via the v3 REST API in Prism Central. Categories are a metadata property of the <a class="reference external" href="https://developer.nutanix.com/reference/prism_central/v3/#definitions-vm_metadata">v3/vms API</a> .</p>
+</li>
+</ol>
+</div>
+<div class="section" id="takeaways">
+<h2>Takeaways<a class="headerlink" href="#takeaways" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Calm Blueprints can deploy applications that are automatically secured with Flow.</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/flow_assign_categories_in_calm/flow_assign_categories_in_calm.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019 Nutanix.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

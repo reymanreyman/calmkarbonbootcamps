@@ -1,0 +1,913 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Calm: Windows Workloads</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Calm: Day 2 Operations" href="../calm_day2/calm_day2.html" />
+    <link rel="prev" title="Calm: Linux Workloads" href="../calm_linux/calm_linux.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  </head><body>
+
+  <div id="navbar" class="navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/NutanixWorkshops.svg"></span>
+           </a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html"> <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Calm</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../what_is_calm/what_is_calm.html">What Is Calm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#what-is-the-state-of-things-today">What is the State of Things Today</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#managing-apps-is-increasingly-challenging">Managing Apps Is Increasingly Challenging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#how-does-nutanix-solve-this-problem">How Does Nutanix Solve This Problem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#foundation-for-enterprise-cloud">Foundation For Enterprise Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#delivering-the-enterprise-cloud-vision">Delivering the Enterprise Cloud Vision</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#delivering-the-enterprise-cloud-vision-multi-cloud">Delivering the Enterprise Cloud Vision: Multi-Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#calm-application-lifecycle-automation">Calm: Application Lifecycle Automation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#blueprints-capture-all-elements-of-the-application">Blueprints Capture All Elements of the Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#make-sense-of-complexity-in-a-visual-way">Make Sense of Complexity in a Visual Way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#blueprints-are-flexible-and-open">Blueprints Are Flexible and Open</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#blueprints-are-used-for-lifecycle-management">Blueprints Are Used for Lifecycle Management</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#calm-self-service-and-governance">Calm: Self-Service and Governance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#nutanix-marketplace-empowers-self-service">Nutanix Marketplace Empowers Self-Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#deploy-in-one-click">Deploy in One-Click</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#end-to-end-audits-and-governance">End-to-End Audits and Governance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#calm-hybrid-cloud-management">Calm: Hybrid Cloud Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#hybrid-cloud-management">Hybrid Cloud Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#deploy-across-clouds-based-on-need">Deploy across Clouds Based on Need</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#automate-empower-relax">Automate. Empower. Relax</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_enable/calm_enable.html">Calm: Enable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_enable/calm_enable.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_enable/calm_enable.html#enabling-app-management">Enabling App Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_enable/calm_enable.html#adding-active-directory">Adding Active Directory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_projects/calm_projects.html">Calm: Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_projects/calm_projects.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_projects/calm_projects.html#creating-a-project">Creating A Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_projects/calm_projects.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_linux/calm_linux.html">Calm: Linux Workloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-a-blueprint">Creating a Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-credentials">Creating Credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#defining-variables">Defining Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#adding-a-downloadable-image">Adding a Downloadable Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-services">Creating Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-the-database-service">Creating the Database Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-the-web-server-service">Creating the Web Server Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-the-load-balancer-service">Creating the Load Balancer Service</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#adding-dependencies">Adding Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#launching-and-managing-the-application">Launching and Managing the Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Calm: Windows Workloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-the-blueprint">Creating the Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-services">Adding Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#defining-package-install">Defining Package Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#launching-the-blueprint">Launching the Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-scale-out-iis-tier">(Optional) Scale Out IIS Tier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-managing-mssql-with-era">(Optional) Managing MSSQL with Era</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_day2/calm_day2.html">Calm: Day 2 Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#lab-setup">Lab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#scaling-out">Scaling Out</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#scaling-in">Scaling In</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#upgrading">Upgrading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#launching-and-managing-the-application">Launching and Managing the Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#optional-variable-scaling">(Optional) Variable Scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_escript/calm_escript.html">Calm: EScript and Task Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#lab-setup">Lab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#using-existing-machine-services">Using Existing Machine Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#restlist-custom-action">RESTList Custom Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#getdefaultsubnet-custom-action">GetDefaultSubnet Custom Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#running-the-custom-actions">Running the Custom Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#publishing-to-the-task-library">Publishing to the Task Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html">Calm: Marketplace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#calm-marketplace-part-1">Calm Marketplace Part 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#publishing-blueprints-from-marketplace-manager">Publishing Blueprints from Marketplace Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#cloning-blueprints-from-marketplace">Cloning Blueprints from Marketplace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#editing-cloned-blueprint">Editing Cloned Blueprint</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#calm-marketplace-part-2">Calm Marketplace Part 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#publishing-blueprints">Publishing Blueprints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#approving-blueprints">Approving Blueprints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#configuring-project-environment">Configuring Project Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#launching-blueprint-from-the-marketplace">Launching Blueprint from the Marketplace</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Optional Labs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../flow_assign_categories_in_calm/flow_assign_categories_in_calm.html">Flow: Assign Categories inside Calm Blueprint (Optional)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../flow_assign_categories_in_calm/flow_assign_categories_in_calm.html#using-flow-with-calm">Using Flow with Calm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flow_assign_categories_in_calm/flow_assign_categories_in_calm.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Karbon</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html">Windows Tools VM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html#deploying-tools-vm">Deploying Tools VM</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/index.html">Karbon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../karbon/index.html#what-are-containers">What are Containers?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../karbon/index.html#container-benefits-and-issues">Container Benefits and Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../karbon/index.html#introducing-kubernetes">Introducing Kubernetes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#lab-setup">Lab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#creating-a-karbon-cluster">Creating a Karbon Cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#getting-started-with-kubectl">Getting Started with Kubectl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#deploying-an-application">Deploying an Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#accessing-wordpress">Accessing Wordpress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#exploring-logging-visualization">Exploring Logging &amp; Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#coming-soon">Coming Soon!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#takeaways">Takeaways</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#additional-kubernetes-training-resources">Additional Kubernetes Training Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/windows_tools_vm.html">Windows Tools VM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/windows_tools_vm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/windows_tools_vm.html#deploying-tools-vm">Deploying Tools VM</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/linux_tools_vm.html">Linux Tools VM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/linux_tools_vm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/linux_tools_vm.html#deploying-centos">Deploying CentOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/linux_tools_vm.html#verify-tools-install">Verify Tools Install</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><p class="caption"><span class="caption-text">Calm</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../what_is_calm/what_is_calm.html">What Is Calm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_enable/calm_enable.html">Calm: Enable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_projects/calm_projects.html">Calm: Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_linux/calm_linux.html">Calm: Linux Workloads</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Calm: Windows Workloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-the-blueprint">Creating the Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-services">Adding Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#defining-package-install">Defining Package Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#launching-the-blueprint">Launching the Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-scale-out-iis-tier">(Optional) Scale Out IIS Tier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-managing-mssql-with-era">(Optional) Managing MSSQL with Era</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_day2/calm_day2.html">Calm: Day 2 Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_escript/calm_escript.html">Calm: EScript and Task Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html">Calm: Marketplace</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Optional Labs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../flow_assign_categories_in_calm/flow_assign_categories_in_calm.html">Flow: Assign Categories inside Calm Blueprint (Optional)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Karbon</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html">Windows Tools VM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/index.html">Karbon</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/windows_tools_vm.html">Windows Tools VM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/linux_tools_vm.html">Linux Tools VM</a></li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <div class="section" id="calm-windows-workloads">
+<span id="calm-win"></span><h1>Calm: Windows Workloads<a class="headerlink" href="#calm-windows-workloads" title="Permalink to this headline">¶</a></h1>
+<p><em>The estimated time to complete this lab is 60 minutes.</em></p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p><strong>In this exercise you will explore the basics of working with Windows workloads in Nutanix Calm by building and deploying a blueprint that installs and configures a multi-tier</strong> <a class="reference external" href="http://bugnetproject.com/documentation/">bug tracker</a> <strong>web app using Microsoft SQL Server database &amp; IIS webserver. This lab assumes you are familiar with basic Calm functionality or have completed the</strong> <a class="reference internal" href="../calm_linux/calm_linux.html#calm-linux"><span class="std std-ref">Calm: Linux Workloads</span></a> <strong>lab.</strong></p>
+</div>
+<div class="section" id="creating-the-blueprint">
+<h2>Creating the Blueprint<a class="headerlink" href="#creating-the-blueprint" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Within Calm, create a new <strong>Multi VM/Pod Blueprint</strong>.</p>
+</li>
+<li><p class="first">Fill out the following fields and click <strong>Proceed</strong> to launch the Blueprint Editor:</p>
+<ul class="simple">
+<li><strong>Name</strong> - <em>Initials</em>-CalmWindowsIntro</li>
+<li><strong>Description</strong> - [BugNET](http://&#64;&#64;{MSIIS.address}&#64;&#64;/bugnet)</li>
+<li><strong>Project</strong> - <em>Initials</em>-Calm</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Using the description value provided will create a hyperlink to the BugNET application to launch once deployment has completed.</p>
+</div>
+</li>
+<li><p class="first">Click <strong>Credentials</strong> and create the following two credentials:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Credential Name</strong></td>
+<td>WIN_VM_CRED</td>
+<td>SQL_CRED</td>
+</tr>
+<tr class="row-even"><td><strong>Username</strong></td>
+<td>Administrator</td>
+<td>Administrator</td>
+</tr>
+<tr class="row-odd"><td><strong>Secret Type</strong></td>
+<td>Password</td>
+<td>Password</td>
+</tr>
+<tr class="row-even"><td><strong>Password</strong></td>
+<td>nutanix/4u</td>
+<td>Str0ngSQL/4u$</td>
+</tr>
+</tbody>
+</table>
+<div class="figure">
+<img alt="../_images/credentials1.png" src="../_images/credentials1.png" />
+</div>
+</li>
+<li><p class="first">Click <strong>Save</strong> and return back to the Blueprint Editor.</p>
+</li>
+<li><p class="first">Click <strong>Configuration</strong> and create the following <strong>Downloadable Image Configuration</strong>:</p>
+<ul class="simple">
+<li><strong>Package Name</strong> - MSSQL2014_ISO</li>
+<li><strong>Description</strong> - Microsoft SQL 2014 Installation ISO</li>
+<li><strong>Image Name</strong> - MSSQL2014.iso</li>
+<li><strong>Image Type</strong> - ISO Image</li>
+<li><strong>Architecture</strong> - X86_64</li>
+<li><strong>Source URI</strong> - <a class="reference external" href="http://download.microsoft.com/download/7/9/F/79F4584A-A957-436B-8534-3397F33790A6/SQLServer2014SP3-FullSlipstream-x64-ENU.iso">http://download.microsoft.com/download/7/9/F/79F4584A-A957-436B-8534-3397F33790A6/SQLServer2014SP3-FullSlipstream-x64-ENU.iso</a></li>
+<li><strong>Product Name</strong> - MSSQL</li>
+<li><strong>Product Version</strong> - 2014</li>
+<li><strong>Checksum Algorithm</strong> - <em>Leave blank</em></li>
+<li><strong>Checksum Value</strong> - <em>Leave blank</em></li>
+</ul>
+<div class="figure">
+<img alt="../_images/downloadable_image_config.png" src="../_images/downloadable_image_config.png" />
+</div>
+</li>
+<li><p class="first">Click <strong>Save</strong> and return back to the Blueprint Editor.</p>
+</li>
+<li><p class="first">Using the <strong>Default</strong> Application Profile, specify the following <strong>Variables</strong> in the <strong>Configuration Panel</strong>:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="19%" />
+<col width="20%" />
+<col width="0%" />
+<col width="17%" />
+<col width="19%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><strong>Name</strong></th>
+<th class="head"><strong>Data Type</strong></th>
+<th class="head" colspan="3"><strong>Value</strong>      | <strong>Secret</strong></th>
+<th class="head"><strong>Runtime</strong></th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>DbName</td>
+<td>String</td>
+<td colspan="3">BugNET         | No</td>
+<td>Yes</td>
+</tr>
+<tr class="row-odd"><td>DbUsername</td>
+<td>String</td>
+<td>BugNETUser</td>
+<td colspan="2">No</td>
+<td>Yes</td>
+</tr>
+<tr class="row-even"><td>DbPassword</td>
+<td>String</td>
+<td>Nutanix/4u$</td>
+<td colspan="2">Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="row-odd"><td>User_initials</td>
+<td>String</td>
+<td><em>Leave blank</em></td>
+<td colspan="2">No</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<div class="figure">
+<img alt="../_images/variables.png" src="../_images/variables.png" />
+</div>
+</li>
+<li><p class="first">Click <strong>Save</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="adding-services">
+<h2>Adding Services<a class="headerlink" href="#adding-services" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Under <strong>Application Overview &gt; Services</strong>, click <em class="fa fa-plus-circle"></em> twice to add two new Services.</p>
+<div class="figure">
+<img alt="../_images/create_service.png" src="../_images/create_service.png" />
+</div>
+</li>
+<li><p class="first">Use the table below to complete the <strong>VM</strong> fields for each service:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="32%" />
+<col width="32%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Service Name</strong></td>
+<td><strong>MSSQL</strong></td>
+<td><strong>MSIIS</strong></td>
+</tr>
+<tr class="row-even"><td><strong>Name</strong></td>
+<td>MSSQL2014</td>
+<td>MSIIS8</td>
+</tr>
+<tr class="row-odd"><td><strong>Cloud</strong></td>
+<td>Nutanix</td>
+<td>Nutanix</td>
+</tr>
+<tr class="row-even"><td><strong>Operating System</strong></td>
+<td>Windows</td>
+<td>Windows</td>
+</tr>
+<tr class="row-odd"><td><strong>VM Name</strong></td>
+<td>&#64;&#64;{User_initials}&#64;&#64;-MSSQL</td>
+<td>&#64;&#64;{User_initials}&#64;&#64;-MSIIS</td>
+</tr>
+<tr class="row-even"><td><strong>Number of Images</strong></td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td><strong>Image 1</strong></td>
+<td>Windows2012R2</td>
+<td>Windows2012R2</td>
+</tr>
+<tr class="row-even"><td><strong>Device Type 1</strong></td>
+<td>DISK</td>
+<td>DISK</td>
+</tr>
+<tr class="row-odd"><td><strong>Device Bus 1</strong></td>
+<td>SCSI</td>
+<td>SCSI</td>
+</tr>
+<tr class="row-even"><td><strong>Bootable 1</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="row-odd"><td><strong>Image 2</strong></td>
+<td>MSSQL2014_ISO</td>
+<td>N/A</td>
+</tr>
+<tr class="row-even"><td><strong>Device Type 2</strong></td>
+<td>CD-ROM</td>
+<td>N/A</td>
+</tr>
+<tr class="row-odd"><td><strong>Device Bus 2</strong></td>
+<td>IDE</td>
+<td>N/A</td>
+</tr>
+<tr class="row-even"><td><strong>Bootable 2</strong></td>
+<td>No</td>
+<td>N/A</td>
+</tr>
+<tr class="row-odd"><td><strong>vCPUs</strong></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="row-even"><td><strong>Cores per vCPU</strong></td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr class="row-odd"><td><strong>Memory (GiB)</strong></td>
+<td>6</td>
+<td>6</td>
+</tr>
+<tr class="row-even"><td><strong>Guest Customization</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="row-odd"><td><strong>Type</strong></td>
+<td>Sysprep</td>
+<td>Sysprep</td>
+</tr>
+<tr class="row-even"><td><strong>Install Type</strong></td>
+<td>Prepared</td>
+<td>Prepared</td>
+</tr>
+<tr class="row-odd"><td><strong>Script</strong></td>
+<td><em>Copy script below table</em></td>
+<td><em>Copy script below table</em></td>
+</tr>
+<tr class="row-even"><td><strong>Additional vDisks</strong></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td><strong>Device Type</strong></td>
+<td>DISK</td>
+<td>DISK</td>
+</tr>
+<tr class="row-even"><td><strong>Device Buse</strong></td>
+<td>SCSI</td>
+<td>SCSI</td>
+</tr>
+<tr class="row-odd"><td><strong>Size (GiB)</strong></td>
+<td>100</td>
+<td>100</td>
+</tr>
+<tr class="row-even"><td><strong>VGPUs</strong></td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="row-odd"><td><strong>Categories</strong></td>
+<td>None</td>
+<td>None</td>
+</tr>
+<tr class="row-even"><td><strong>Network Adapters</strong></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="row-odd"><td><strong>NIC 1</strong></td>
+<td>Primary</td>
+<td>Primary</td>
+</tr>
+<tr class="row-even"><td><strong>Check log-in upon create</strong></td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr class="row-odd"><td><strong>Credential</strong></td>
+<td>WIN_VM_CRED</td>
+<td>WIN_VM_CRED</td>
+</tr>
+<tr class="row-even"><td><strong>Address</strong></td>
+<td>NIC 1</td>
+<td>NIC 1</td>
+</tr>
+<tr class="row-odd"><td><strong>Connection Type</strong></td>
+<td>Windows (Powershell)</td>
+<td>Windows (Powershell)</td>
+</tr>
+<tr class="row-even"><td><strong>Connection Port</strong></td>
+<td>5985</td>
+<td>5985</td>
+</tr>
+<tr class="row-odd"><td><strong>Delay (in seconds)</strong></td>
+<td>Increase to <strong>90</strong></td>
+<td>Increase to <strong>90</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">Sysprep Script</span><a class="headerlink" href="#id1" title="Permalink to this code">¶</a></div>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;unattend</span> <span class="na">xmlns=</span><span class="s">&quot;urn:schemas-microsoft-com:unattend&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;settings</span> <span class="na">pass=</span><span class="s">&quot;specialize&quot;</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;component</span> <span class="na">xmlns:wcm=</span><span class="s">&quot;http://schemas.microsoft.com/WMIConfig/2002/State&quot;</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="na">name=</span><span class="s">&quot;Microsoft-Windows-Shell-Setup&quot;</span> <span class="na">processorArchitecture=</span><span class="s">&quot;amd64&quot;</span> <span class="na">publicKeyToken=</span><span class="s">&quot;31bf3856ad364e35&quot;</span> <span class="na">language=</span><span class="s">&quot;neutral&quot;</span> <span class="na">versionScope=</span><span class="s">&quot;nonSxS&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;ComputerName&gt;</span>@@{name}@@<span class="nt">&lt;/ComputerName&gt;</span>
+        <span class="nt">&lt;RegisteredOrganization&gt;</span>Nutanix<span class="nt">&lt;/RegisteredOrganization&gt;</span>
+        <span class="nt">&lt;RegisteredOwner&gt;</span>Acropolis<span class="nt">&lt;/RegisteredOwner&gt;</span>
+        <span class="nt">&lt;TimeZone&gt;</span>UTC<span class="nt">&lt;/TimeZone&gt;</span>
+     <span class="nt">&lt;/component&gt;</span>
+     <span class="nt">&lt;component</span> <span class="na">xmlns=</span><span class="s">&quot;&quot;</span> <span class="na">name=</span><span class="s">&quot;Microsoft-Windows-TerminalServices-LocalSessionManager&quot;</span> <span class="na">publicKeyToken=</span><span class="s">&quot;31bf3856ad364e35&quot;</span> <span class="na">language=</span><span class="s">&quot;neutral&quot;</span> <span class="na">versionScope=</span><span class="s">&quot;nonSxS&quot;</span> <span class="na">processorArchitecture=</span><span class="s">&quot;amd64&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;fDenyTSConnections&gt;</span>false<span class="nt">&lt;/fDenyTSConnections&gt;</span>
+     <span class="nt">&lt;/component&gt;</span>
+     <span class="nt">&lt;component</span> <span class="na">xmlns=</span><span class="s">&quot;&quot;</span> <span class="na">name=</span><span class="s">&quot;Microsoft-Windows-TerminalServices-RDP-WinStationExtensions&quot;</span> <span class="na">publicKeyToken=</span><span class="s">&quot;31bf3856ad364e35&quot;</span> <span class="na">language=</span><span class="s">&quot;neutral&quot;</span> <span class="na">versionScope=</span><span class="s">&quot;nonSxS&quot;</span> <span class="na">processorArchitecture=</span><span class="s">&quot;amd64&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;UserAuthentication&gt;</span>0<span class="nt">&lt;/UserAuthentication&gt;</span>
+     <span class="nt">&lt;/component&gt;</span>
+     <span class="nt">&lt;component</span> <span class="na">xmlns:wcm=</span><span class="s">&quot;http://schemas.microsoft.com/WMIConfig/2002/State&quot;</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="na">name=</span><span class="s">&quot;Networking-MPSSVC-Svc&quot;</span> <span class="na">processorArchitecture=</span><span class="s">&quot;amd64&quot;</span> <span class="na">publicKeyToken=</span><span class="s">&quot;31bf3856ad364e35&quot;</span> <span class="na">language=</span><span class="s">&quot;neutral&quot;</span> <span class="na">versionScope=</span><span class="s">&quot;nonSxS&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;FirewallGroups&gt;</span>
+           <span class="nt">&lt;FirewallGroup</span> <span class="na">wcm:action=</span><span class="s">&quot;add&quot;</span> <span class="na">wcm:keyValue=</span><span class="s">&quot;RemoteDesktop&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;Active&gt;</span>true<span class="nt">&lt;/Active&gt;</span>
+              <span class="nt">&lt;Profile&gt;</span>all<span class="nt">&lt;/Profile&gt;</span>
+              <span class="nt">&lt;Group&gt;</span>@FirewallAPI.dll,-28752<span class="nt">&lt;/Group&gt;</span>
+           <span class="nt">&lt;/FirewallGroup&gt;</span>
+        <span class="nt">&lt;/FirewallGroups&gt;</span>
+     <span class="nt">&lt;/component&gt;</span>
+  <span class="nt">&lt;/settings&gt;</span>
+  <span class="nt">&lt;settings</span> <span class="na">pass=</span><span class="s">&quot;oobeSystem&quot;</span><span class="nt">&gt;</span>
+     <span class="nt">&lt;component</span> <span class="na">xmlns:wcm=</span><span class="s">&quot;http://schemas.microsoft.com/WMIConfig/2002/State&quot;</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="na">name=</span><span class="s">&quot;Microsoft-Windows-Shell-Setup&quot;</span> <span class="na">processorArchitecture=</span><span class="s">&quot;amd64&quot;</span> <span class="na">publicKeyToken=</span><span class="s">&quot;31bf3856ad364e35&quot;</span> <span class="na">language=</span><span class="s">&quot;neutral&quot;</span> <span class="na">versionScope=</span><span class="s">&quot;nonSxS&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;UserAccounts&gt;</span>
+           <span class="nt">&lt;AdministratorPassword&gt;</span>
+              <span class="nt">&lt;Value&gt;</span>@@{WIN_VM_CRED.secret}@@<span class="nt">&lt;/Value&gt;</span>
+              <span class="nt">&lt;PlainText&gt;</span>true<span class="nt">&lt;/PlainText&gt;</span>
+           <span class="nt">&lt;/AdministratorPassword&gt;</span>
+        <span class="nt">&lt;/UserAccounts&gt;</span>
+        <span class="nt">&lt;AutoLogon&gt;</span>
+           <span class="nt">&lt;Password&gt;</span>
+              <span class="nt">&lt;Value&gt;</span>@@{WIN_VM_CRED.secret}@@<span class="nt">&lt;/Value&gt;</span>
+              <span class="nt">&lt;PlainText&gt;</span>true<span class="nt">&lt;/PlainText&gt;</span>
+           <span class="nt">&lt;/Password&gt;</span>
+           <span class="nt">&lt;Enabled&gt;</span>true<span class="nt">&lt;/Enabled&gt;</span>
+           <span class="nt">&lt;Username&gt;</span>Administrator<span class="nt">&lt;/Username&gt;</span>
+        <span class="nt">&lt;/AutoLogon&gt;</span>
+        <span class="nt">&lt;FirstLogonCommands&gt;</span>
+           <span class="nt">&lt;SynchronousCommand</span> <span class="na">wcm:action=</span><span class="s">&quot;add&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;CommandLine&gt;</span>cmd.exe /c netsh firewall add portopening TCP 5985 &quot;Port 5985&quot;<span class="nt">&lt;/CommandLine&gt;</span>
+              <span class="nt">&lt;Description&gt;</span>Win RM port open<span class="nt">&lt;/Description&gt;</span>
+              <span class="nt">&lt;Order&gt;</span>1<span class="nt">&lt;/Order&gt;</span>
+              <span class="nt">&lt;RequiresUserInput&gt;</span>true<span class="nt">&lt;/RequiresUserInput&gt;</span>
+           <span class="nt">&lt;/SynchronousCommand&gt;</span>
+           <span class="nt">&lt;SynchronousCommand</span> <span class="na">wcm:action=</span><span class="s">&quot;add&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;CommandLine&gt;</span>powershell -Command &quot;Enable-PSRemoting -SkipNetworkProfileCheck -Force&quot;<span class="nt">&lt;/CommandLine&gt;</span>
+              <span class="nt">&lt;Description&gt;</span>Enable PS-Remoting<span class="nt">&lt;/Description&gt;</span>
+              <span class="nt">&lt;Order&gt;</span>2<span class="nt">&lt;/Order&gt;</span>
+              <span class="nt">&lt;RequiresUserInput&gt;</span>true<span class="nt">&lt;/RequiresUserInput&gt;</span>
+           <span class="nt">&lt;/SynchronousCommand&gt;</span>
+           <span class="nt">&lt;SynchronousCommand</span> <span class="na">wcm:action=</span><span class="s">&quot;add&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;CommandLine&gt;</span>powershell -Command &quot;Set-ExecutionPolicy -ExecutionPolicy RemoteSigned&quot;<span class="nt">&lt;/CommandLine&gt;</span>
+              <span class="nt">&lt;Description&gt;</span>Enable Remote-Signing<span class="nt">&lt;/Description&gt;</span>
+              <span class="nt">&lt;Order&gt;</span>3<span class="nt">&lt;/Order&gt;</span>
+              <span class="nt">&lt;RequiresUserInput&gt;</span>false<span class="nt">&lt;/RequiresUserInput&gt;</span>
+           <span class="nt">&lt;/SynchronousCommand&gt;</span>
+        <span class="nt">&lt;/FirstLogonCommands&gt;</span>
+        <span class="nt">&lt;OOBE&gt;</span>
+           <span class="nt">&lt;HideEULAPage&gt;</span>true<span class="nt">&lt;/HideEULAPage&gt;</span>
+           <span class="nt">&lt;SkipMachineOOBE&gt;</span>true<span class="nt">&lt;/SkipMachineOOBE&gt;</span>
+        <span class="nt">&lt;/OOBE&gt;</span>
+     <span class="nt">&lt;/component&gt;</span>
+     <span class="nt">&lt;component</span> <span class="na">xmlns:wcm=</span><span class="s">&quot;http://schemas.microsoft.com/WMIConfig/2002/State&quot;</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span> <span class="na">name=</span><span class="s">&quot;Microsoft-Windows-International-Core&quot;</span> <span class="na">processorArchitecture=</span><span class="s">&quot;amd64&quot;</span> <span class="na">publicKeyToken=</span><span class="s">&quot;31bf3856ad364e35&quot;</span> <span class="na">language=</span><span class="s">&quot;neutral&quot;</span> <span class="na">versionScope=</span><span class="s">&quot;nonSxS&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;InputLocale&gt;</span>en-US<span class="nt">&lt;/InputLocale&gt;</span>
+        <span class="nt">&lt;SystemLocale&gt;</span>en-US<span class="nt">&lt;/SystemLocale&gt;</span>
+        <span class="nt">&lt;UILanguageFallback&gt;</span>en-us<span class="nt">&lt;/UILanguageFallback&gt;</span>
+        <span class="nt">&lt;UILanguage&gt;</span>en-US<span class="nt">&lt;/UILanguage&gt;</span>
+           <span class="nt">&lt;UserLocale&gt;</span>en-US<span class="nt">&lt;/UserLocale&gt;</span>
+     <span class="nt">&lt;/component&gt;</span>
+  <span class="nt">&lt;/settings&gt;</span>
+<span class="nt">&lt;/unattend&gt;</span>
+</pre></div>
+</div>
+</div>
+<p>Take a minute to review the Sysprep script. You can see the VMs being configured to autologon to the local Administrator account using the WIN_VM_CRED password. While this exercise will not join the VMs to an Active Directory domain, you could use either Sysprep or a Package Install task script to automate the joining of a domain.</p>
+<p>Additionally, the firewall is configured to allow port 5985 which Calm uses to execute PowerShell scripts against the host. For those familiar with previous versions of Calm, the <strong>Karan</strong> service VM is no longer required to proxy PowerShell commands to the service VMs. Instead, Calm has introduced native support for running PowerShell scripts on remote hosts.</p>
+<p>Similar to the Task Manager application in the <a class="reference internal" href="../calm_linux/calm_linux.html#calm-linux"><span class="std std-ref">Calm: Linux Workloads</span></a> lab, you want to ensure the database is available prior to the IIS web server setup.</p>
+</li>
+<li><p class="first">In the Blueprint Editor, select the <strong>MSIIS</strong> service and create a dependency on the <strong>MSSQL</strong> service.</p>
+<div class="figure">
+<img alt="../_images/services.png" src="../_images/services.png" />
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="defining-package-install">
+<h2>Defining Package Install<a class="headerlink" href="#defining-package-install" title="Permalink to this headline">¶</a></h2>
+<p>For <strong>each</strong> of the following 7 scripts (3 for MSSSQL and 4 for MSIIS), the <strong>Type</strong>, <strong>Script Type</strong>, and <strong>Credential</strong> fields will be the same:</p>
+<ul class="simple">
+<li><strong>Type</strong> - Execute</li>
+<li><strong>Script Type</strong> - PowerShell</li>
+<li><strong>Credential</strong> - WIN_VM_CRED</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you were working with domain joined VMs, you would require a separate domain credential to execute PowerShell scripts following the VM being joined to the domain.</p>
+</div>
+<ol class="arabic">
+<li><p class="first">Select the <strong>MSSQL</strong> service and open the <strong>Package</strong> tab in the <strong>Configuration Panel</strong>.</p>
+</li>
+<li><p class="first">Name the package and click <strong>Configure install</strong> to begin adding installation tasks.</p>
+<p>You will add multiple scripts to complete each installation. Working with multiple scripts allows for easier maintenance and application of code across multiple services or blueprints using the Calm <strong>Task Library</strong>. The Task Library allows you to create modularized scripts to achieve certain common functions such as joining a domain or configuring common OS settings.</p>
+</li>
+<li><p class="first">Under <strong>MSSQL &gt; Package Install</strong>, click <strong>+ Task</strong> and fill out the following fields:</p>
+<ul class="simple">
+<li><strong>Task Name</strong> - InitializeDisk1</li>
+<li><strong>Script</strong> -</li>
+</ul>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>Get-Disk -Number 1 | Initialize-Disk -ErrorAction SilentlyContinue
+New-Partition -DiskNumber 1 -UseMaximumSize -AssignDriveLetter -ErrorAction SilentlyContinue | Format-Volume -Confirm:$false
+
+# Enable CredSSP
+Enable-WSManCredSSP -Role Server -Force
+</pre></div>
+</div>
+<p>The above script simply performs an initialization and format of the extra 100GB VDisk added during VM configuration of the service.</p>
+</li>
+<li><p class="first">Click <strong>Publish To Library &gt; Publish</strong> to save this task script to the Task Library for future use.</p>
+</li>
+<li><p class="first">Repeat clicking <strong>+ Task</strong> to add the remaining two scripts:</p>
+<ul class="simple">
+<li><strong>Task Name</strong> - InstallMSSQL</li>
+<li><strong>Script</strong> -</li>
+</ul>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nv">$DriveLetter</span> <span class="p">=</span> <span class="p">$(</span><span class="nb">Get-Partition</span> <span class="n">-DiskNumber</span> <span class="n">1</span> <span class="n">-PartitionNumber</span> <span class="n">2</span> <span class="p">|</span> <span class="nb">select </span><span class="n">DriveLetter</span> <span class="n">-ExpandProperty</span> <span class="n">DriveLetter</span><span class="p">)</span>
+<span class="nv">$edition</span> <span class="p">=</span> <span class="s2">&quot;Standard&quot;</span>
+<span class="nv">$HOSTNAME</span><span class="p">=$(</span><span class="n">hostname</span><span class="p">)</span>
+<span class="nv">$PackageName</span> <span class="p">=</span> <span class="s2">&quot;MsSqlServer2014Standard&quot;</span>
+<span class="nv">$Prerequisites</span> <span class="p">=</span> <span class="s2">&quot;Net-Framework-Core&quot;</span>
+<span class="nv">$silentArgs</span> <span class="p">=</span> <span class="s2">&quot;/IACCEPTSQLSERVERLICENSETERMS /Q /ACTION=install /FEATURES=SQLENGINE,SSMS,ADV_SSMS,CONN,IS,BC,SDK,BOL /SECURITYMODE=sql /SAPWD=</span><span class="se">`&quot;</span><span class="s2">@@{SQL_CRED.secret}@@</span><span class="se">`&quot;</span><span class="s2"> /ASSYSADMINACCOUNTS=</span><span class="se">`&quot;</span><span class="s2">@@{SQL_CRED.username}@@</span><span class="se">`&quot;</span><span class="s2"> /SQLSYSADMINACCOUNTS=</span><span class="se">`&quot;</span><span class="s2">@@{SQL_CRED.username}@@</span><span class="se">`&quot;</span><span class="s2"> /INSTANCEID=MSSQLSERVER /INSTANCENAME=MSSQLSERVER /UPDATEENABLED=False /INDICATEPROGRESS /TCPENABLED=1 /INSTALLSQLDATADIR=</span><span class="se">`&quot;</span><span class="s2">${DriveLetter}:\Microsoft SQL Server</span><span class="se">`&quot;</span><span class="s2">&quot;</span>
+<span class="nv">$setupDriveLetter</span> <span class="p">=</span> <span class="s2">&quot;D:&quot;</span>
+<span class="nv">$setupPath</span> <span class="p">=</span> <span class="s2">&quot;$setupDriveLetter\setup.exe&quot;</span>
+<span class="nv">$validExitCodes</span> <span class="p">=</span> <span class="p">@(</span><span class="n">0</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nv">$Prerequisites</span><span class="p">){</span>
+<span class="nb">Install-WindowsFeature</span> <span class="n">-IncludeAllSubFeature</span> <span class="n">-ErrorAction</span> <span class="n">Stop</span> <span class="nv">$Prerequisites</span>
+<span class="p">}</span>
+
+<span class="nb">Write-Output</span> <span class="s2">&quot;Installing $PackageName....&quot;</span>
+
+<span class="nv">$install</span> <span class="p">=</span> <span class="nb">Start-Process</span> <span class="n">-FilePath</span> <span class="nv">$setupPath</span> <span class="n">-ArgumentList</span> <span class="nv">$silentArgs</span> <span class="n">-Wait</span> <span class="n">-NoNewWindow</span> <span class="n">-PassThru</span>
+<span class="nv">$install</span><span class="p">.</span><span class="n">WaitForExit</span><span class="p">()</span>
+
+<span class="nv">$exitCode</span> <span class="p">=</span> <span class="nv">$install</span><span class="p">.</span><span class="n">ExitCode</span>
+<span class="nv">$install</span><span class="p">.</span><span class="n">Dispose</span><span class="p">()</span>
+
+<span class="nb">Write-Output</span> <span class="s2">&quot;Command [</span><span class="se">`&quot;</span><span class="s2">$setupPath</span><span class="se">`&quot;</span><span class="s2"> $silentArgs] exited with </span><span class="se">`&#39;</span><span class="s2">$exitCode</span><span class="se">`&#39;</span><span class="s2">.&quot;</span>
+<span class="k">if</span> <span class="p">(</span><span class="nv">$validExitCodes</span> <span class="o">-notcontains</span> <span class="nv">$exitCode</span><span class="p">)</span> <span class="p">{</span>
+<span class="nb">Write-Output</span> <span class="s2">&quot;Running [</span><span class="se">`&quot;</span><span class="s2">$setupPath</span><span class="se">`&quot;</span><span class="s2"> $silentArgs] was not successful. Exit code was &#39;$exitCode&#39;. See log for possible error messages.&quot;</span>
+<span class="n">exit</span> <span class="n">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Reviewing the above script you can see it is performing an automated installation of SQL Server, using the SQL_CRED credential details and using the extra 100GB VDisk for the SQL data files.</p>
+<p>According to Nutanix best practices for production database deployments, what else would need to be added to the VM/installation?</p>
+<ul class="simple">
+<li><strong>Task Name</strong> - FirewallRules</li>
+<li><strong>Script</strong> -</li>
+</ul>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="nb">New-NetFirewallRule</span> <span class="n">-DisplayName</span> <span class="s2">&quot;SQL Server&quot;</span> <span class="n">-Direction</span> <span class="n">Inbound</span> <span class="n">-Protocol</span> <span class="n">TCP</span> <span class="n">-LocalPort</span> <span class="n">1433</span> <span class="n">-Action</span> <span class="n">allow</span>
+<span class="nb">New-NetFirewallRule</span> <span class="n">-DisplayName</span> <span class="s2">&quot;SQL Admin Connection&quot;</span> <span class="n">-Direction</span> <span class="n">Inbound</span> <span class="n">-Protocol</span> <span class="n">TCP</span> <span class="n">-LocalPort</span> <span class="n">1434</span> <span class="n">-Action</span> <span class="n">allow</span>
+<span class="nb">New-NetFirewallRule</span> <span class="n">-DisplayName</span> <span class="s2">&quot;SQL Database Management&quot;</span> <span class="n">-Direction</span> <span class="n">Inbound</span> <span class="n">-Protocol</span> <span class="n">UDP</span> <span class="n">-LocalPort</span> <span class="n">1434</span> <span class="n">-Action</span> <span class="n">allow</span>
+<span class="nb">New-NetFirewallRule</span> <span class="n">-DisplayName</span> <span class="s2">&quot;SQL Service Broker&quot;</span> <span class="n">-Direction</span> <span class="n">Inbound</span> <span class="n">-Protocol</span> <span class="n">TCP</span> <span class="n">-LocalPort</span> <span class="n">4022</span> <span class="n">-Action</span> <span class="n">allow</span>
+<span class="nb">New-NetFirewallRule</span> <span class="n">-DisplayName</span> <span class="s2">&quot;SQL Debugger/RPC&quot;</span> <span class="n">-Direction</span> <span class="n">Inbound</span> <span class="n">-Protocol</span> <span class="n">TCP</span> <span class="n">-LocalPort</span> <span class="n">135</span> <span class="n">-Action</span> <span class="n">allow</span>
+<span class="nb">New-NetFirewallRule</span> <span class="n">-DisplayName</span> <span class="s2">&quot;SQL Browser&quot;</span> <span class="n">-Direction</span> <span class="n">Inbound</span> <span class="n">-Protocol</span> <span class="n">TCP</span> <span class="n">-LocalPort</span> <span class="n">2382</span> <span class="n">-Action</span> <span class="n">allow</span>
+</pre></div>
+</div>
+<p>Reviewing the above script you can see it is allowing inbound access through the Windows Firewall for key SQL services.</p>
+<p>Once complete, your MSSQL service should look like this:</p>
+<div class="figure">
+<img alt="../_images/mssql_package_install.png" src="../_images/mssql_package_install.png" />
+</div>
+</li>
+<li><p class="first">Select the <strong>MSIIS</strong> service and open the <strong>Package</strong> tab in the <strong>Configuration Panel</strong>.</p>
+</li>
+<li><p class="first">Name the package and click <strong>Configure install</strong> to begin adding installation tasks.</p>
+</li>
+<li><p class="first">Under <strong>MSIIS &gt; Package Install</strong>, click <strong>+ Task</strong>.</p>
+</li>
+<li><p class="first">Similar to the first step of the MSSQL service installation, you will need to initialize and format the additional 100GB VDisk. Rather than manually specifying the same script for this task, click <strong>Browse Library</strong>.</p>
+</li>
+<li><p class="first">Select the <strong>InitializeDisk1</strong> task you had previously published and click <strong>Select &gt; Copy</strong>.</p>
+<div class="figure">
+<img alt="../_images/task_library.png" src="../_images/task_library.png" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The Task Library also gives you the ability to provide variable definitions if there are Calm macros present in the published task.</p>
+</div>
+</li>
+<li><p class="first">Specify the <strong>Name</strong> and <strong>Credential</strong>, then repeat clicking <strong>+ Task</strong> to add the remaining three scripts:</p>
+<ul class="simple">
+<li><strong>Task Name</strong> - InstallWebPI</li>
+<li><strong>Script</strong> -</li>
+</ul>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span># Install WPI
+New-Item c:/msi -Type Directory
+Invoke-WebRequest &#39;http://download.microsoft.com/download/C/F/F/CFF3A0B8-99D4-41A2-AE1A-496C08BEB904/WebPlatformInstaller_amd64_en-US.msi&#39; -OutFile c:/msi/WebPlatformInstaller_amd64_en-US.msi
+Start-Process &#39;c:/msi/WebPlatformInstaller_amd64_en-US.msi&#39; &#39;/qn&#39; -PassThru | Wait-Process
+
+Invoke-WebRequest &#39;https://download.microsoft.com/download/4/B/1/4B1E9B0E-A4F3-4715-B417-31C82302A70A/ENU/x86/SQLSysClrTypes.msi&#39; -OutFile c:/msi/SQLSysClrTypes.msi-x86.msi
+Start-Process &#39;c:/msi/SQLSysClrTypes.msi-x86.msi&#39; &#39;/qn&#39; -PassThru | Wait-Process
+Invoke-WebRequest &#39;https://download.microsoft.com/download/4/B/1/4B1E9B0E-A4F3-4715-B417-31C82302A70A/ENU/x64/SQLSysClrTypes.msi&#39; -OutFile c:/msi/SQLSysClrTypes.msi-x64.msi
+Start-Process &#39;c:/msi/SQLSysClrTypes.msi-x64.msi&#39; &#39;/qn&#39; -PassThru | Wait-Process
+</pre></div>
+</div>
+<p>The above script installs the Microsoft Web Platform Installer (WebPI), which is used to download, install, and update components of the Microsoft Web Platform, including Internet Information Services (IIS), IIS Media Platform technologies, SQL Server Express, .NET Framework, and Visual Web Developer.</p>
+<ul class="simple">
+<li><strong>Task Name</strong> - InstallNetFeatures</li>
+<li><strong>Script</strong> -</li>
+</ul>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="c"># Enable Repair via Windows Update</span>
+<span class="nv">$servicing</span> <span class="p">=</span> <span class="s2">&quot;HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\Servicing&quot;</span>
+<span class="nb">New-Item</span> <span class="n">-Path</span> <span class="nv">$servicing</span> <span class="n">-Force</span>
+<span class="nb">Set-ItemProperty</span> <span class="n">-Path</span> <span class="nv">$servicing</span> <span class="n">-Name</span> <span class="n">RepairContentServerSource</span> <span class="n">-Value</span> <span class="n">2</span>
+
+<span class="c"># Install Features</span>
+<span class="nb">Install-WindowsFeature</span> <span class="n">-Name</span> <span class="n">NET-Framework-Core</span>
+<span class="nb">Install-WindowsFeature</span> <span class="n">-Name</span> <span class="n">NET-WCF-Services45</span> <span class="n">-IncludeAllSubFeature</span>
+</pre></div>
+</div>
+<p>The above script installs .NET Framework 4.5 on the VM.</p>
+<ul class="simple">
+<li><strong>Task Name</strong> - InstallBugNetApp</li>
+<li><strong>Script</strong> -</li>
+</ul>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span># Create the installation configuration file
+$configFile = &quot;AppPath[@]Default Web Site/bugnet
+DbServer[@]@@{MSSQL.address}@@
+DbName[@]@@{DbName}@@
+DbUsername[@]@@{DbUsername}@@
+Database Password[@]@@{DbPassword}@@
+DbAdminUsername[@]sa
+DbAdminPassword[@]@@{SQL_CRED.secret}@@&quot;
+
+echo $configFile &gt;&gt; BugNET0.app
+
+# Install the application via Web PI
+WebpiCmd-x64.exe /Install /UseRemoteDatabase /Application:BugNET@BugNET0.app /AcceptEula
+</pre></div>
+</div>
+<p>The above script uses the Application Profile variables you defined at the beginning of the exercise to populate the configuration file of the Bug Tracker app. It then leverages WebPI to install the application from the <a class="reference external" href="https://webgallery.microsoft.com/gallery">Microsoft Web App Gallery</a>. With minimal changes, you could leverage many popular applications from the Gallery, including apps for CMS, eCommerce, Wiki, ticketing, and more.</p>
+<p>Once complete, your MSIIS service should look like this:</p>
+<div class="figure">
+<img alt="../_images/msiis_package_install.png" src="../_images/msiis_package_install.png" />
+</div>
+</li>
+<li><p class="first">Click <strong>Save</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="launching-the-blueprint">
+<h2>Launching the Blueprint<a class="headerlink" href="#launching-the-blueprint" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">From the upper toolbar in the Blueprint Editor, click <strong>Launch</strong>.</p>
+</li>
+<li><p class="first">Specify a unique <strong>Application Name</strong> (e.g. <em>Initials</em>-BugNET) and your <strong>User_initials</strong> Runtime variable value for VM naming.</p>
+</li>
+<li><p class="first">Click <strong>Create</strong>.</p>
+<p>The <strong>Audit</strong> tab can be used to monitor the deployment of the application. The application should take approximately 20 minutes to deploy.</p>
+</li>
+<li><p class="first">Once the Create action completes, and the application is in a <strong>Running</strong> state, open the <strong>BugNET</strong> link in a new tab.</p>
+<div class="figure">
+<img alt="../_images/bugnet_link.png" src="../_images/bugnet_link.png" />
+</div>
+</li>
+<li><p class="first">You’ll be presented with an <strong>Installation Status Report</strong> page.  Wait for it to report <strong>Installation Complete</strong>, and then click the link at the bottom to access the application.</p>
+<div class="figure">
+<img alt="../_images/bugnet_setup.png" src="../_images/bugnet_setup.png" />
+</div>
+<p>Congratulations! You now have a fully functional bug tracking application automatically provisioned leveraging Microsoft SQL Server and IIS.</p>
+<div class="figure">
+<img alt="../_images/bugnet_app.png" src="../_images/bugnet_app.png" />
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="optional-scale-out-iis-tier">
+<h2>(Optional) Scale Out IIS Tier<a class="headerlink" href="#optional-scale-out-iis-tier" title="Permalink to this headline">¶</a></h2>
+<p>Leveraging the same approach from the <a class="reference internal" href="../calm_linux/calm_linux.html#calm-linux"><span class="std std-ref">Calm: Linux Workloads</span></a> lab of having multiple web server replicas, can you add a CentOS based HAProxy service to this blueprint to allow for load balancing across multiple IIS servers?</p>
+</div>
+<div class="section" id="optional-managing-mssql-with-era">
+<h2>(Optional) Managing MSSQL with Era<a class="headerlink" href="#optional-managing-mssql-with-era" title="Permalink to this headline">¶</a></h2>
+<p>Complete the <span class="xref std std-ref">era</span> lab to gain a basic understanding of Era’s capabilities and operation.</p>
+<p>Log into your BugNET application with the default credentials (<strong>admin/password</strong>) and follow the wizard to create a new project.</p>
+<p>You have just deployed your production BugNET application and now desire to rapidly deploy multiple dev/test instances using the latest available production data.</p>
+<p>Can you build a version of this Blueprint that leverages an Era clone of your SQL Server database?</p>
+<p><strong>Hints</strong></p>
+<ul class="simple">
+<li>Clone your existing blueprint first!</li>
+<li>When registering the SQL Server source database in Era, this deployment uses the default MSSQLServer instance name. You can use Windows Authentication to access the SQL Server instance, using the WIN_VM_CRED credentials.</li>
+<li>When adding services in Calm, one of the <strong>Cloud</strong> types is using an <strong>Existing VM</strong>. Existing VMs only require the IP address of the VM and a credential for login.</li>
+<li>When cloning, the Windows License Key for the Windows Server 2012 R2 VM is <code class="docutils literal notranslate"><span class="pre">W3GGN-FT8W3-Y4M27-J84CP-Q3VJ9</span></code>.</li>
+<li>You could use a semi-automated approach wherein you have a <strong>Runtime</strong> variable for your cloned database IP. In this instance, you would create a clone of your source database, wait for it to return an IP address, and provision the blueprint with the IP specified at runtime.</li>
+<li>You could use a fully automated approach wherein you create a <strong>Package Install Task</strong> for your <strong>Existing VM</strong>. That task could execute an <a class="reference external" href="https://portal.nutanix.com/#/page/docs/details?targetId=Nutanix-Calm-Admin-Operations-Guide-v240:nuc-supported-escript-modules-functions-c.html#nconcept_uxr_5dj_5bb">EScript</a> to perform an API call to Era to initiate the DB clone operation and return the IP address.</li>
+<li>Don’t forget about dependencies!</li>
+</ul>
+</div>
+<div class="section" id="takeaways">
+<h2>Takeaways<a class="headerlink" href="#takeaways" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Calm provides the same application deployment and lifecycle management benefits for Windows workloads as it does for Linux workloads.</li>
+<li>Calm can natively execute remote PowerShell scripts on Windows endpoints without the need for a Windows-based proxy.</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/calm_win/calm_win.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019 Nutanix.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

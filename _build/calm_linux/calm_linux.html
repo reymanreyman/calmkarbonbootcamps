@@ -1,0 +1,1107 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Calm: Linux Workloads</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Calm: Windows Workloads" href="../calm_win/calm_win.html" />
+    <link rel="prev" title="Calm: Projects" href="../calm_projects/calm_projects.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  </head><body>
+
+  <div id="navbar" class="navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/NutanixWorkshops.svg"></span>
+           </a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html"> <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Calm</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../what_is_calm/what_is_calm.html">What Is Calm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#what-is-the-state-of-things-today">What is the State of Things Today</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#managing-apps-is-increasingly-challenging">Managing Apps Is Increasingly Challenging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#how-does-nutanix-solve-this-problem">How Does Nutanix Solve This Problem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#foundation-for-enterprise-cloud">Foundation For Enterprise Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#delivering-the-enterprise-cloud-vision">Delivering the Enterprise Cloud Vision</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#delivering-the-enterprise-cloud-vision-multi-cloud">Delivering the Enterprise Cloud Vision: Multi-Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#calm-application-lifecycle-automation">Calm: Application Lifecycle Automation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#blueprints-capture-all-elements-of-the-application">Blueprints Capture All Elements of the Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#make-sense-of-complexity-in-a-visual-way">Make Sense of Complexity in a Visual Way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#blueprints-are-flexible-and-open">Blueprints Are Flexible and Open</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#blueprints-are-used-for-lifecycle-management">Blueprints Are Used for Lifecycle Management</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#calm-self-service-and-governance">Calm: Self-Service and Governance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#nutanix-marketplace-empowers-self-service">Nutanix Marketplace Empowers Self-Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#deploy-in-one-click">Deploy in One-Click</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#end-to-end-audits-and-governance">End-to-End Audits and Governance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#calm-hybrid-cloud-management">Calm: Hybrid Cloud Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#hybrid-cloud-management">Hybrid Cloud Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#deploy-across-clouds-based-on-need">Deploy across Clouds Based on Need</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#automate-empower-relax">Automate. Empower. Relax</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_enable/calm_enable.html">Calm: Enable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_enable/calm_enable.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_enable/calm_enable.html#enabling-app-management">Enabling App Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_enable/calm_enable.html#adding-active-directory">Adding Active Directory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_projects/calm_projects.html">Calm: Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_projects/calm_projects.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_projects/calm_projects.html#creating-a-project">Creating A Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_projects/calm_projects.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Calm: Linux Workloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-blueprint">Creating a Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-credentials">Creating Credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#defining-variables">Defining Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-a-downloadable-image">Adding a Downloadable Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-services">Creating Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-the-database-service">Creating the Database Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-the-web-server-service">Creating the Web Server Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-the-load-balancer-service">Creating the Load Balancer Service</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-dependencies">Adding Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#launching-and-managing-the-application">Launching and Managing the Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_win/calm_win.html">Calm: Windows Workloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#creating-the-blueprint">Creating the Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#adding-services">Adding Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#defining-package-install">Defining Package Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#launching-the-blueprint">Launching the Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#optional-scale-out-iis-tier">(Optional) Scale Out IIS Tier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#optional-managing-mssql-with-era">(Optional) Managing MSSQL with Era</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_day2/calm_day2.html">Calm: Day 2 Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#lab-setup">Lab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#scaling-out">Scaling Out</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#scaling-in">Scaling In</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#upgrading">Upgrading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#launching-and-managing-the-application">Launching and Managing the Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#optional-variable-scaling">(Optional) Variable Scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_escript/calm_escript.html">Calm: EScript and Task Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#lab-setup">Lab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#using-existing-machine-services">Using Existing Machine Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#restlist-custom-action">RESTList Custom Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#getdefaultsubnet-custom-action">GetDefaultSubnet Custom Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#running-the-custom-actions">Running the Custom Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#publishing-to-the-task-library">Publishing to the Task Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html">Calm: Marketplace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#calm-marketplace-part-1">Calm Marketplace Part 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#publishing-blueprints-from-marketplace-manager">Publishing Blueprints from Marketplace Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#cloning-blueprints-from-marketplace">Cloning Blueprints from Marketplace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#editing-cloned-blueprint">Editing Cloned Blueprint</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#calm-marketplace-part-2">Calm Marketplace Part 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#publishing-blueprints">Publishing Blueprints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#approving-blueprints">Approving Blueprints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#configuring-project-environment">Configuring Project Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#launching-blueprint-from-the-marketplace">Launching Blueprint from the Marketplace</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Optional Labs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../flow_assign_categories_in_calm/flow_assign_categories_in_calm.html">Flow: Assign Categories inside Calm Blueprint (Optional)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../flow_assign_categories_in_calm/flow_assign_categories_in_calm.html#using-flow-with-calm">Using Flow with Calm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flow_assign_categories_in_calm/flow_assign_categories_in_calm.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Karbon</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html">Windows Tools VM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html#deploying-tools-vm">Deploying Tools VM</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/index.html">Karbon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../karbon/index.html#what-are-containers">What are Containers?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../karbon/index.html#container-benefits-and-issues">Container Benefits and Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../karbon/index.html#introducing-kubernetes">Introducing Kubernetes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#lab-setup">Lab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#creating-a-karbon-cluster">Creating a Karbon Cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#getting-started-with-kubectl">Getting Started with Kubectl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#deploying-an-application">Deploying an Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#accessing-wordpress">Accessing Wordpress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#exploring-logging-visualization">Exploring Logging &amp; Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#coming-soon">Coming Soon!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#takeaways">Takeaways</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#additional-kubernetes-training-resources">Additional Kubernetes Training Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/windows_tools_vm.html">Windows Tools VM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/windows_tools_vm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/windows_tools_vm.html#deploying-tools-vm">Deploying Tools VM</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/linux_tools_vm.html">Linux Tools VM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/linux_tools_vm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/linux_tools_vm.html#deploying-centos">Deploying CentOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/linux_tools_vm.html#verify-tools-install">Verify Tools Install</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><p class="caption"><span class="caption-text">Calm</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../what_is_calm/what_is_calm.html">What Is Calm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_enable/calm_enable.html">Calm: Enable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_projects/calm_projects.html">Calm: Projects</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Calm: Linux Workloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-blueprint">Creating a Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-credentials">Creating Credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#defining-variables">Defining Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-a-downloadable-image">Adding a Downloadable Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-services">Creating Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#creating-the-database-service">Creating the Database Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-the-web-server-service">Creating the Web Server Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#creating-the-load-balancer-service">Creating the Load Balancer Service</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-dependencies">Adding Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#launching-and-managing-the-application">Launching and Managing the Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_win/calm_win.html">Calm: Windows Workloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_day2/calm_day2.html">Calm: Day 2 Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_escript/calm_escript.html">Calm: EScript and Task Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html">Calm: Marketplace</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Optional Labs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../flow_assign_categories_in_calm/flow_assign_categories_in_calm.html">Flow: Assign Categories inside Calm Blueprint (Optional)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Karbon</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html">Windows Tools VM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/index.html">Karbon</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/windows_tools_vm.html">Windows Tools VM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/linux_tools_vm.html">Linux Tools VM</a></li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <div class="section" id="calm-linux-workloads">
+<span id="calm-linux"></span><h1>Calm: Linux Workloads<a class="headerlink" href="#calm-linux-workloads" title="Permalink to this headline">¶</a></h1>
+<p><em>The estimated time to complete this lab is 60 minutes.</em></p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Nutanix Calm allows you to seamlessly select, provision, and manage your business applications across your infrastructure for both the private and public clouds. Nutanix Calm provides App lifecycle, monitoring and remediation to manage your heterogeneous infrastructure, for example, VMs or bare-metal servers. Nutanix Calm supports multiple platforms so that you can use the single self-service and automation interface to manage all your infrastructure.</p>
+<p><strong>In this lab you will explore the basics of Nutanix Calm by building and deploying a blueprint that installs and configures a multi-tier Task Manager web app using MySQL, nginix, and HAProxy.</strong></p>
+</div>
+<div class="section" id="creating-a-blueprint">
+<h2>Creating a Blueprint<a class="headerlink" href="#creating-a-blueprint" title="Permalink to this headline">¶</a></h2>
+<p>A blueprint is the framework for every application that you model by using Nutanix Calm. Blueprints are templates that describe all the steps that are required to provision, configure, and execute tasks on the services and applications that are created. You can create a blueprint to represent the architecture of your application and then run the blueprint repeatedly to create an instance, provision, and launch your applications. A blueprint also defines the lifecycle of an application and its underlying infrastructure starting from the creation of the application to the actions that are carried out on a blueprint until the termination of the application.</p>
+<p>You can use blueprints to model the applications of various complexities; from simply provisioning a single virtual machine to provisioning and managing a multi-node, multi-tier application.</p>
+<ol class="arabic">
+<li><p class="first">In <strong>Prism Central</strong>, select <em class="fa fa-bars"></em> <strong>&gt; Services &gt; Calm</strong>.</p>
+<div class="figure">
+<img alt="../_images/1.png" src="../_images/1.png" />
+</div>
+</li>
+<li><p class="first">Select <img alt="blueprints" src="../_images/blueprints.png" /> <strong>Blueprints</strong> in the left hand toolbar to view and manage Calm bleuprints.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Mousing over an icon will display its title.</p>
+</div>
+</li>
+<li><p class="first">Click <strong>+ Create Blueprint &gt; Multi VM/Pod Blueprint</strong>.</p>
+</li>
+<li><p class="first">Fill out the following fields:</p>
+<ul class="simple">
+<li><strong>Name</strong> - <em>Initials</em>-CalmLinuxIntro</li>
+<li><strong>Description</strong> - [Task Manager Application](http://&#64;&#64;{HAProxy.address}&#64;&#64;/)</li>
+<li><strong>Project</strong> - <em>Initials</em>-Calm</li>
+</ul>
+<div class="figure">
+<img alt="../_images/2.png" src="../_images/2.png" />
+</div>
+</li>
+<li><p class="first">Click <strong>Proceed</strong> to launch the Blueprint Editor.</p>
+<p>The Blueprint Editor provides a graphical representation of various components that enable you to visualize and configure the components and their dependencies in your environment.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="creating-credentials">
+<h2>Creating Credentials<a class="headerlink" href="#creating-credentials" title="Permalink to this headline">¶</a></h2>
+<p>First you will create a credential that will be used to authenticate Calm to the CentOS VMs you will eventually deploy. Credentials are unique to each Blueprint, and are <strong>not</strong> exported as part of the Blueprint for security purposes. Each Blueprint requires a minimum of 1 credential.</p>
+<p>This exercise uses a “Generic Cloud” CentOS image. This is a common option for multiple popular Linux distributions that is lightweight, supports Cloud-Init based configuration, and utilizes <a class="reference external" href="https://www.ssh.com/ssh/public-key-authentication">SSH keypair authentication</a> instead of passwords. Keypair based authentication is commonplace in all public cloud environments.</p>
+<ol class="arabic">
+<li><p class="first">Click <strong>Credentials</strong>.</p>
+<div class="figure">
+<img alt="../_images/3.png" src="../_images/3.png" />
+</div>
+</li>
+<li><p class="first">Click <strong>Credentials</strong> <em class="fa fa-plus-circle"></em> and fill out the following fields:</p>
+<ul class="simple">
+<li><strong>Credential Name</strong> - CENTOS</li>
+<li><strong>Username</strong> - centos</li>
+<li><strong>Secret Type</strong> - SSH Private Key</li>
+<li><strong>Key</strong> - Paste in your own private key, or use:</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-----</span><span class="n">BEGIN</span> <span class="n">RSA</span> <span class="n">PRIVATE</span> <span class="n">KEY</span><span class="o">-----</span>
+<span class="n">MIIEowIBAAKCAQEAii7qFDhVadLx5lULAG</span><span class="o">/</span><span class="n">ooCUTA</span><span class="o">/</span><span class="n">ATSmXbArs</span><span class="o">+</span><span class="n">GdHxbUWd</span><span class="o">/</span><span class="n">bNG</span>
+<span class="n">ZCXnaQ2L1mSVVGDxfTbSaTJ3En3tVlMtD2RjZPdhqWESCaoj2kXLYSiNDS9qz3SK</span>
+<span class="mi">6</span><span class="n">h822je</span><span class="o">/</span><span class="n">f9O9CzCTrw2XGhnDVwmNraUvO5wmQObCDthTXc72PcBOd6oa4ENsnuY9</span>
+<span class="n">HtiETg29TZXgCYPFXipLBHSZYkBmGgccAeY9dq5ywiywBJLuoSovXkkRJk3cd7Gy</span>
+<span class="n">hCRIwYzqfdgSmiAMYgJLrz</span><span class="o">/</span><span class="n">UuLxatPqXts2D8v1xqR9EPNZNzgd4QHK4of1lqsNR</span>
+<span class="n">uz2SxkwqLcXSw0mGcAL8mIwVpzhPzwmENC5OrwIBJQKCAQB</span><span class="o">++</span><span class="n">q2WCkCmbtByyrAp</span>
+<span class="mi">6</span><span class="n">ktiukjTL6MGGGhjX</span><span class="o">/</span><span class="n">PgYA5IvINX1SvtU0NZnb7FAntiSz7GFrODQyFPQ0jL3bq0</span>
+<span class="n">MrwzRDA6x</span><span class="o">+</span><span class="n">cPzMb</span><span class="o">/</span><span class="mi">7</span><span class="n">RvBEIGdadfFjbAVaMqfAsul5SpBokKFLxU6lDb2CMdhS67c</span>
+<span class="mi">1</span><span class="n">K2Hv0qKLpHL0vAdEZQ2nFAMWETvVMzl0o1dQmyGzA0GTY8VYdCRsUbwNgvFMvBj</span>
+<span class="mi">8</span><span class="n">T</span><span class="o">/</span><span class="n">svzjpASDifa7IXlGaLrXfCH584zt7y</span><span class="o">+</span><span class="n">qjJ05O1G0NFslQ9n2wi7F93N8rHxgl</span>
+<span class="n">JDE4OhfyaDyLL1UdBlBpjYPSUbX7D5NExLggWEVFEwx4JRaK6</span><span class="o">+</span><span class="n">aDdFDKbSBIidHf</span>
+<span class="n">h45NAoGBANjANRKLBtcxmW4foK5ILTuFkOaowqj</span><span class="o">+</span><span class="mi">2</span><span class="n">AIgT1ezCVpErHDFg0bkuvDk</span>
+<span class="n">QVdsAJRX5</span><span class="o">//</span><span class="n">luSO30dI0OWWGjgmIUXD7iej0sjAPJjRAv8ai</span><span class="o">+</span><span class="n">MYyaLfkdqv1Oj5c</span>
+<span class="n">oDC3KjmSdXTuWSYNvarsW</span><span class="o">+</span><span class="n">Uf2v7zlZlWesTnpV6gkZH3tX86iuiZAoGBAKM0mKX0</span>
+<span class="n">EjFkJH65Ym7gIED2CUyuFqq4WsCUD2RakpYZyIBKZGr8MRni3I4z6Hqm</span><span class="o">+</span><span class="n">rxVW6Dj</span>
+<span class="n">uFGQe5GhgPvO23UG1Y6nm0VkYgZq81TraZc</span><span class="o">/</span><span class="n">oMzignSC95w7OsLaLn6qp32Fje1M</span>
+<span class="n">Ez2Yn0T3dDcu1twY8OoDuvWx5LFMJ3NoRJaHAoGBAJ4rZP</span><span class="o">+</span><span class="n">xj17DVElxBo0EPK7k</span>
+<span class="mi">7</span><span class="n">TKygDYhwDjnJSRSN0HfFg0agmQqXucjGuzEbyAkeN1Um9vLU</span><span class="o">+</span><span class="n">xrTHqEyIN</span><span class="o">/</span><span class="n">Jqxk</span>
+<span class="n">hztKxzfTtBhK7M84p7M5iq</span><span class="o">+</span><span class="mi">0</span><span class="n">jfMau8ykdOVHZAB</span><span class="o">/</span><span class="n">odHeXLrnbrr</span><span class="o">/</span><span class="n">gVQsAKw1NdDC</span>
+<span class="n">kPCNXP</span><span class="o">/</span><span class="n">c9JrzB</span><span class="o">+</span><span class="n">c4juEVAoGBAJGPxmp</span><span class="o">/</span><span class="n">vTL4c5OebIxnCAKWP6VBUnyWliFhdYME</span>
+<span class="n">rECvNkjoZ2ZWjKhijVw8Il</span><span class="o">+</span><span class="n">OAjlFNgwJXzP9Z0qJIAMuHa2QeUfhmFKlo4ku9LOF</span>
+<span class="mi">2</span><span class="n">rdUbNJpKD5m</span><span class="o">+</span><span class="n">IRsLX1az4W6zLwPVRHp56WjzFJEfGiRjzMBfOxkMSBSjbLjDm3Z</span>
+<span class="n">iUf7AoGBALjvtjapDwlEa5</span><span class="o">/</span><span class="n">CFvzOVGFq4L</span><span class="o">/</span><span class="n">OJTBEBGx</span><span class="o">/</span><span class="n">SA4HUc3TFTtlY2hvTDPZ</span>
+<span class="n">dQr</span><span class="o">/</span><span class="n">JBzLBUjCOBVuUuH3uW7hGhW</span><span class="o">+</span><span class="n">DnlzrfbfJATaRR8Ht6VU651T</span><span class="o">+</span><span class="n">Gbrr8EqNpCP</span>
+<span class="n">gmznERCNf9Kaxl</span><span class="o">/</span><span class="n">hlyV5dZBe</span><span class="o">/</span><span class="mi">2</span><span class="n">LIK</span><span class="o">+/</span><span class="n">jLGNu9EJLoraaCBFshJKF</span>
+<span class="o">-----</span><span class="n">END</span> <span class="n">RSA</span> <span class="n">PRIVATE</span> <span class="n">KEY</span><span class="o">-----</span>
+</pre></div>
+</div>
+<div class="figure">
+<img alt="../_images/4.png" src="../_images/4.png" />
+</div>
+</li>
+<li><p class="first">Click <strong>Save</strong>, and then <strong>Back</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="defining-variables">
+<h2>Defining Variables<a class="headerlink" href="#defining-variables" title="Permalink to this headline">¶</a></h2>
+<p>Variables allow extensibility of Blueprints, meaning a single Blueprint can be used for multiple purposes and environments depending on the configuration of its variables.
+Variables can either be static values saved as part of the Blueprint or they can be specified at <strong>Runtime</strong> (when the Blueprint is launched).  Variables are specific to a given <strong>Application Profile</strong>, which is the platform on which the blueprint will be deployed. For example, a blueprint capable of being deployed to both AHV and AWS would have 2 Application Profiles. Each profile could have individual variables and VM configurations.</p>
+<p>By default, variables are stored as a <strong>String</strong> and are visible in the Configuration Pane. Setting a variable as <strong>Secret</strong> will mask the value and is ideal for variables such as passwords. In addition to the String and Secret options, there are Integer, Multi-line String, Date, Time, and Date Time <strong>Data Types</strong>, and more advanced <strong>Input Types</strong>, however these are outside the scope of this lab.</p>
+<p>Variables can be used in scripts executed against objects using the <strong>&#64;&#64;{variable_name}&#64;&#64;</strong> construct. Calm will expand and replace the variable with the appropriate value before sending to the VM.</p>
+<ol class="arabic">
+<li><p class="first">In the <strong>Configuration Pane</strong> on the right side of the Blueprint Editor, under <strong>Variables</strong>, add the following variables (<strong>Runtime</strong> is specified by toggling the <strong>Running Man</strong> icon to Blue):</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="30%" />
+<col width="39%" />
+<col width="15%" />
+<col width="16%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Variable Name</strong></td>
+<td><strong>Data Type</strong> | <strong>Value</strong></td>
+<td><strong>Secret</strong></td>
+<td><strong>Runtime</strong></td>
+</tr>
+<tr class="row-even"><td>User_initials</td>
+<td>String        | xyz</td>
+<td>&#160;</td>
+<td>X</td>
+</tr>
+<tr class="row-odd"><td>Mysql_user</td>
+<td>String        | root</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td>Mysql_password</td>
+<td>String        | nutanix/4u</td>
+<td>X</td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td>Database_name</td>
+<td>String        | homestead</td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<div class="figure">
+<img alt="../_images/5.png" src="../_images/5.png" />
+</div>
+</li>
+<li><p class="first">Click <strong>Save</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="adding-a-downloadable-image">
+<h2>Adding a Downloadable Image<a class="headerlink" href="#adding-a-downloadable-image" title="Permalink to this headline">¶</a></h2>
+<p>VMs in AHV can be deployed based on a disk image. With Calm, you can select a Downloadable Image via a URI. During the application deployment, Prism Central will automatically download and create the image specified. If an image with the same URI already exists on the cluster, it will skip the download and use the local image instead.</p>
+<ol class="arabic">
+<li><p class="first">From the top toolbar, click <strong>Configuration &gt; Downloadable Image Configuration</strong> <em class="fa fa-plus-circle"></em> and fill out the following fields:</p>
+<ul class="simple">
+<li><strong>Package Name</strong> - CentOS_7_Cloud</li>
+<li><strong>Description</strong> - CentOS 7 Cloud Image</li>
+<li><strong>Image Name</strong> - CentOS_7_Cloud</li>
+<li><strong>Image Type</strong> - Disk Image</li>
+<li><strong>Architecture</strong> - X86_64</li>
+<li><strong>Source URI</strong> - <a class="reference external" href="http://download.nutanix.com/calm/CentOS-7-x86_64-GenericCloud.qcow2">http://download.nutanix.com/calm/CentOS-7-x86_64-GenericCloud.qcow2</a></li>
+<li><strong>Product Name</strong> - CentOS</li>
+<li><strong>Product Version</strong> - 7</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This Generic Cloud image is the same that’s used for the majority of the Nutanix Pre-Seeded Application Blueprints.</p>
+</div>
+<div class="figure">
+<img alt="../_images/6.png" src="../_images/6.png" />
+</div>
+</li>
+<li><p class="first">Click <strong>Save</strong>, and then <strong>Back</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="creating-services">
+<h2>Creating Services<a class="headerlink" href="#creating-services" title="Permalink to this headline">¶</a></h2>
+<p>Services are the virtual machine instances, existing machines or bare-metal machines, that you can provision and configure by using Nutanix Calm.</p>
+<p>In this exercise you will create the database, webserver, and load balancer services that comprise your application.</p>
+<div class="section" id="creating-the-database-service">
+<h3>Creating the Database Service<a class="headerlink" href="#creating-the-database-service" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">In <strong>Application Overview &gt; Services</strong>, click <em class="fa fa-plus-circle"></em> to add a new Service.</p>
+<p>By default, the Application Overview is located in the lower right-hand corner of the Blueprint Editor and is used to create and manage Blueprint layers such as Services, Application Profiles, and Actions.</p>
+<div class="figure">
+<img alt="../_images/7.png" src="../_images/7.png" />
+</div>
+<p>Note <strong>Service1</strong> appears in the <strong>Workspace</strong> and the <strong>Configuration Pane</strong> reflects the configuration of the selected Service.</p>
+</li>
+<li><p class="first">Fill out the following fields:</p>
+<ul class="simple">
+<li><strong>Service Name</strong> - MySQL</li>
+<li><strong>Name</strong> - MySQLAHV</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This defines the name of the substrate within Calm. Names can only contain alphanumeric characters, spaces, and underscores.</p>
+</div>
+<ul class="simple">
+<li><strong>Cloud</strong> - Nutanix</li>
+<li><strong>OS</strong> - Linux</li>
+<li><strong>VM Name</strong> - &#64;&#64;{User_initials}&#64;&#64;-MYSQL-&#64;&#64;{calm_array_index}&#64;&#64;-&#64;&#64;{calm_time}&#64;&#64;</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This will use the Runtime <strong>User_initials</strong> variable you previously provided to prepend the VM name with your initials. It will also use built-in macros to provide the array index (for scale out services) and a time stamp.</p>
+</div>
+<ul>
+<li><p class="first"><strong>Image</strong> - CentOS_7_Cloud</p>
+</li>
+<li><p class="first"><strong>Device Type</strong> - Disk</p>
+</li>
+<li><p class="first"><strong>Device Bus</strong> - SCSI</p>
+</li>
+<li><p class="first">Select <strong>Bootable</strong></p>
+</li>
+<li><p class="first"><strong>vCPUs</strong> - 2</p>
+</li>
+<li><p class="first"><strong>Cores per vCPU</strong> - 1</p>
+</li>
+<li><p class="first"><strong>Memory (GiB)</strong> - 4</p>
+</li>
+<li><p class="first">Select <strong>Guest Customization</strong></p>
+<ul>
+<li><p class="first"><strong>Type</strong> - Cloud-init</p>
+</li>
+<li><p class="first"><strong>Script</strong> -</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#cloud-config</span>
+users:
+  - name: centos
+    ssh-authorized-keys:
+      - @@<span class="o">{</span>CENTOS.public_key<span class="o">}</span>@@
+    sudo: <span class="o">[</span><span class="s1">&#39;ALL=(ALL) NOPASSWD:ALL&#39;</span><span class="o">]</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">When using an SSH Private Key Credential, Calm is able to decode that private key into the matching public key, and makes the decoded value accessable via the &#64;&#64;{Credential_Name.public_key}&#64;&#64; macro. Cloud-Init is then leveraged to populate the SSH public key value as an authorized key, allowing for the corresponding private key to be used to authenticate to the host.</p>
+</div>
+</li>
+</ul>
+</li>
+<li><p class="first">Select <em class="fa fa-plus-circle"></em> under <strong>Network Adapters (NICs)</strong></p>
+</li>
+<li><p class="first"><strong>NIC 1</strong> - Primary</p>
+</li>
+<li><p class="first"><strong>Credential</strong> - CENTOS</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Click <strong>Save</strong>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>If errors or warnings are presented after saving the blueprint, hover over the icon in the top toolbar to see a list of issues. Resolve any issues and <strong>Save</strong> the blueprint again.</p>
+<div class="last figure">
+<img alt="../_images/8.png" src="../_images/8.png" />
+</div>
+</div>
+<p>Now that you have completed the deployment details for the VM associated with the service, the next step is to tell Calm how the application will be installed on the VM.</p>
+</li>
+<li><p class="first">With the <strong>MySQL</strong> service icon selected in the Workspace pane, scroll to the top of the <strong>Configuration Panel</strong>, and select the <strong>Package</strong> tab.</p>
+<p>The Package is the configuration and application(s) installed on the Service, and is typically accomplished by executing a script on the Service VM.</p>
+</li>
+<li><p class="first">Specify <strong>MySQL_PACKAGE</strong> as the <strong>Package Name</strong> and click <strong>Configure install</strong>.</p>
+<ul class="simple">
+<li><strong>Package Name</strong> - MYSQL_PACKAGE</li>
+</ul>
+<div class="figure">
+<img alt="../_images/9.png" src="../_images/9.png" />
+</div>
+<p>Note the <strong>Package install</strong> field that appears on the MySQL service in the Workspace pane.</p>
+</li>
+<li><p class="first">Select <strong>+ Task</strong>, and fill out the following fields in the <strong>Configuration Panel</strong> to define the script that Calm will remotely execute on the MySQL Service VM:</p>
+<ul>
+<li><p class="first"><strong>Task Name</strong> - Install_sql</p>
+</li>
+<li><p class="first"><strong>Type</strong> - Execute</p>
+</li>
+<li><p class="first"><strong>Script Type</strong> - Shell</p>
+</li>
+<li><p class="first"><strong>Credential</strong> - CENTOS</p>
+</li>
+<li><p class="first"><strong>Script</strong> -</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span> -ex
+
+sudo yum install -y <span class="s2">&quot;http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm&quot;</span>
+sudo yum update -y
+sudo setenforce <span class="m">0</span>
+sudo sed -i <span class="s1">&#39;s/enforcing/disabled/g&#39;</span> /etc/selinux/config /etc/selinux/config
+sudo systemctl stop firewalld <span class="o">||</span> <span class="nb">true</span>
+sudo systemctl disable firewalld <span class="o">||</span> <span class="nb">true</span>
+sudo yum install -y mysql-community-server.x86_64
+
+sudo /bin/systemctl start mysqld
+sudo /bin/systemctl <span class="nb">enable</span> mysqld
+
+<span class="c1">#Mysql secure installation</span>
+mysql -u root<span class="s">&lt;&lt;-EOF</span>
+
+<span class="s">UPDATE mysql.user SET Password=PASSWORD(&#39;@@{Mysql_password}@@&#39;) WHERE User=&#39;@@{Mysql_user}@@&#39;;</span>
+<span class="s">DELETE FROM mysql.user WHERE User=&#39;@@{Mysql_user}@@&#39; AND Host NOT IN (&#39;localhost&#39;, &#39;127.0.0.1&#39;, &#39;::1&#39;);</span>
+<span class="s">DELETE FROM mysql.user WHERE User=&#39;&#39;;</span>
+<span class="s">DELETE FROM mysql.db WHERE Db=&#39;test&#39; OR Db=&#39;test\_%&#39;;</span>
+
+<span class="s">FLUSH PRIVILEGES;</span>
+<span class="s">EOF</span>
+
+mysql -u @@<span class="o">{</span>Mysql_user<span class="o">}</span>@@ -p@@<span class="o">{</span>Mysql_password<span class="o">}</span>@@ <span class="s">&lt;&lt;-EOF</span>
+<span class="s">CREATE DATABASE @@{Database_name}@@;</span>
+<span class="s">GRANT ALL PRIVILEGES ON homestead.* TO &#39;@@{Database_name}@@&#39;@&#39;%&#39; identified by &#39;secret&#39;;</span>
+
+<span class="s">FLUSH PRIVILEGES;</span>
+<span class="s">EOF</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="figure">
+<img alt="../_images/10.png" src="../_images/10.png" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can click the <strong>Pop Out</strong> icon on the script field for a larger window to view/edit scripts.</p>
+</div>
+<p>Reviewing the script you can see the package will install MySQL, configure the credentials and create a database based on the variables specified earlier in the exercise.</p>
+</li>
+<li><p class="first">Select the <strong>MySQL</strong> service icon in the Workspace pane again, select the <strong>Package</strong> tab in the <strong>Configuration Panel</strong>.</p>
+</li>
+<li><p class="first">Click <strong>Configure uninstall</strong>.</p>
+</li>
+<li><p class="first">Select <strong>+ Task</strong>, and fill out the following fields in the <strong>Configuration Panel</strong>:</p>
+<ul>
+<li><p class="first"><strong>Task Name</strong> - Uninstall_sql</p>
+</li>
+<li><p class="first"><strong>Type</strong> - Execute</p>
+</li>
+<li><p class="first"><strong>Script Type</strong> - Shell</p>
+</li>
+<li><p class="first"><strong>Credential</strong> - CENTOS</p>
+</li>
+<li><p class="first"><strong>Script</strong> -</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">echo</span> <span class="s2">&quot;Goodbye!&quot;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="figure">
+<img alt="../_images/11.png" src="../_images/11.png" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The uninstall script can be used for removing packages, updating network services like DHCP and DNS, removing entries from Active Directory, etc. It is not being used for this simple example.</p>
+</div>
+</li>
+<li><p class="first">Click <strong>Save</strong>. You will be prompted with specific errors if there are validation issues such as missing fields or unacceptable characters.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="creating-the-web-server-service">
+<h3>Creating the Web Server Service<a class="headerlink" href="#creating-the-web-server-service" title="Permalink to this headline">¶</a></h3>
+<p>You will now follow similar steps to define a web server service.</p>
+<ol class="arabic">
+<li><p class="first">In <strong>Application Overview &gt; Services</strong>, add an additional service.</p>
+</li>
+<li><p class="first">Select the new service and fill out the following <strong>VM</strong> fields in the <strong>Configuration Panel</strong>:</p>
+<ul>
+<li><p class="first"><strong>Service Name</strong> - WebServer</p>
+</li>
+<li><p class="first"><strong>Name</strong> - WebServerAHV</p>
+</li>
+<li><p class="first"><strong>Cloud</strong> - Nutanix</p>
+</li>
+<li><p class="first"><strong>OS</strong> - Linux</p>
+</li>
+<li><p class="first"><strong>VM Name</strong> - &#64;&#64;{User_initials}&#64;&#64;-WebServer-&#64;&#64;{calm_array_index}&#64;&#64;</p>
+</li>
+<li><p class="first"><strong>Image</strong> - CentOS_7_Cloud</p>
+</li>
+<li><p class="first"><strong>Device Type</strong> - Disk</p>
+</li>
+<li><p class="first"><strong>Device Bus</strong> - SCSI</p>
+</li>
+<li><p class="first">Select <strong>Bootable</strong></p>
+</li>
+<li><p class="first"><strong>vCPUs</strong> - 2</p>
+</li>
+<li><p class="first"><strong>Cores per vCPU</strong> - 1</p>
+</li>
+<li><p class="first"><strong>Memory (GiB)</strong> - 4</p>
+</li>
+<li><p class="first">Select <strong>Guest Customization</strong></p>
+<ul>
+<li><p class="first"><strong>Type</strong> - Cloud-init</p>
+</li>
+<li><p class="first"><strong>Script</strong> -</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#cloud-config</span>
+users:
+  - name: centos
+    ssh-authorized-keys:
+      - @@<span class="o">{</span>CENTOS.public_key<span class="o">}</span>@@
+    sudo: <span class="o">[</span><span class="s1">&#39;ALL=(ALL) NOPASSWD:ALL&#39;</span><span class="o">]</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p class="first">Select <em class="fa fa-plus-circle"></em> under <strong>Network Adapters (NICs)</strong></p>
+</li>
+<li><p class="first"><strong>NIC 1</strong> - Primary</p>
+</li>
+<li><p class="first"><strong>Credential</strong> - CENTOS</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Select the <strong>Package</strong> tab.</p>
+</li>
+<li><p class="first">Specify a <strong>Package Name</strong> and click <strong>Configure install</strong>.</p>
+<ul class="simple">
+<li><strong>Package Name</strong> - WebServer_PACKAGE</li>
+</ul>
+</li>
+<li><p class="first">Select <strong>+ Task</strong>, and fill out the following fields in the <strong>Configuration Panel</strong>:</p>
+<ul>
+<li><p class="first"><strong>Name Task</strong> - Install_WebServer</p>
+</li>
+<li><p class="first"><strong>Type</strong> - Execute</p>
+</li>
+<li><p class="first"><strong>Script Type</strong> - Shell</p>
+</li>
+<li><p class="first"><strong>Credential</strong> - CENTOS</p>
+</li>
+<li><p class="first"><strong>Script</strong> -</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span> -ex
+
+sudo yum update -y
+sudo yum -y install epel-release
+sudo setenforce <span class="m">0</span>
+sudo sed -i <span class="s1">&#39;s/enforcing/disabled/g&#39;</span> /etc/selinux/config /etc/selinux/config
+sudo systemctl stop firewalld <span class="o">||</span> <span class="nb">true</span>
+sudo systemctl disable firewalld <span class="o">||</span> <span class="nb">true</span>
+sudo rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+sudo yum update -y
+sudo yum install -y nginx php56w-fpm php56w-cli php56w-mcrypt php56w-mysql php56w-mbstring php56w-dom git unzip
+
+sudo mkdir -p /var/www/laravel
+<span class="nb">echo</span> <span class="s2">&quot;server {</span>
+<span class="s2"> listen 80 default_server;</span>
+<span class="s2"> listen [::]:80 default_server ipv6only=on;</span>
+<span class="s2">root /var/www/laravel/public/;</span>
+<span class="s2"> index index.php index.html index.htm;</span>
+<span class="s2">location / {</span>
+<span class="s2"> try_files \$uri \$uri/ /index.php?\$query_string;</span>
+<span class="s2"> }</span>
+<span class="s2"> # pass the PHP scripts to FastCGI server listening on /var/run/php5-fpm.sock</span>
+<span class="s2"> location ~ \.php</span>$<span class="s2"> {</span>
+<span class="s2"> try_files \$uri /index.php =404;</span>
+<span class="s2"> fastcgi_split_path_info ^(.+\.php)(/.+)\$;</span>
+<span class="s2"> fastcgi_pass 127.0.0.1:9000;</span>
+<span class="s2"> fastcgi_index index.php;</span>
+<span class="s2"> fastcgi_param SCRIPT_FILENAME \$document_root\$fastcgi_script_name;</span>
+<span class="s2"> include fastcgi_params;</span>
+<span class="s2"> }</span>
+<span class="s2">}&quot;</span> <span class="p">|</span> sudo tee /etc/nginx/conf.d/laravel.conf
+sudo sed -i <span class="s1">&#39;s/80 default_server/80/g&#39;</span> /etc/nginx/nginx.conf
+<span class="k">if</span> <span class="sb">`</span>grep <span class="s2">&quot;cgi.fix_pathinfo&quot;</span> /etc/php.ini<span class="sb">`</span> <span class="p">;</span> <span class="k">then</span>
+ sudo sed -i <span class="s1">&#39;s/cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/&#39;</span> /etc/php.ini
+<span class="k">else</span>
+ sudo sed -i <span class="s1">&#39;s/;cgi.fix_pathinfo=1/cgi.fix_pathinfo=0/&#39;</span> /etc/php.ini
+<span class="k">fi</span>
+
+sudo systemctl <span class="nb">enable</span> php-fpm
+sudo systemctl <span class="nb">enable</span> nginx
+sudo systemctl restart php-fpm
+sudo systemctl restart nginx
+
+<span class="k">if</span> <span class="o">[</span> ! -e /usr/local/bin/composer <span class="o">]</span>
+<span class="k">then</span>
+ curl -sS https://getcomposer.org/installer <span class="p">|</span> php
+ sudo mv composer.phar /usr/local/bin/composer
+ sudo chmod +x /usr/local/bin/composer
+<span class="k">fi</span>
+
+sudo git clone https://github.com/ideadevice/quickstart-basic.git /var/www/laravel
+sudo sed -i <span class="s1">&#39;s/DB_HOST=.*/DB_HOST=@@{MySQL.address}@@/&#39;</span> /var/www/laravel/.env
+
+sudo su - -c <span class="s2">&quot;cd /var/www/laravel; composer install&quot;</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;@@{calm_array_index}@@&quot;</span> <span class="o">==</span> <span class="s2">&quot;0&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+ sudo su - -c <span class="s2">&quot;cd /var/www/laravel; php artisan migrate&quot;</span>
+<span class="k">fi</span>
+
+sudo chown -R nginx:nginx /var/www/laravel
+sudo chmod -R <span class="m">777</span> /var/www/laravel/
+sudo systemctl restart nginx
+</pre></div>
+</div>
+</li>
+</ul>
+<p>This script installs PHP and Nginx to create a web server, and then a Laravel based web application.
+It then configures the web application settings, including updating the <strong>DB_HOST</strong> with the MySQL IP address, accessed via the <strong>&#64;&#64;{MySQL.address}&#64;&#64;</strong> macro.</p>
+</li>
+<li><p class="first">Select the <strong>Package</strong> tab and click <strong>Configure uninstall</strong>.</p>
+</li>
+<li><p class="first">Select <strong>+ Task</strong>, and fill out the following fields in the <strong>Configuration Panel</strong>:</p>
+<ul>
+<li><p class="first"><strong>Name Task</strong> - Uninstall_WebServer</p>
+</li>
+<li><p class="first"><strong>Type</strong> - Execute</p>
+</li>
+<li><p class="first"><strong>Script Type</strong> - Shell</p>
+</li>
+<li><p class="first"><strong>Credential</strong> - CENTOS</p>
+</li>
+<li><p class="first"><strong>Script</strong> -</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span> -ex
+
+sudo rm -rf /var/www/laravel
+sudo yum erase -y nginx
+</pre></div>
+</div>
+</li>
+</ul>
+<p>For many applications it is common to need to scale out a given service, such as the web tier in order to handle more concurrent users. Calm makes it simple to turn deploy an array containing multiple copies of a given service.</p>
+</li>
+<li><p class="first">With the <strong>WebServer</strong> service icon selected in the Workspace pane, scroll to the top of the <strong>Configuration Panel</strong>, and select the <strong>Service</strong> tab.</p>
+</li>
+<li><p class="first">Under <strong>Deployment Config &gt; Number of Replicas</strong>, increase the <strong>Min</strong> value from 1 to 2 and the <strong>Max</strong> value from 1 to 4.</p>
+<div class="figure">
+<img alt="../_images/12.png" src="../_images/12.png" />
+</div>
+<p>This change will provision a minimum of 2 WebServer VMs for each deployment of the application, and allow the array to grow up to a total of 4 WebServer VMs.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Scaling an application in and out will require additional scripting so that the application understands how to leverage the additional VMs.</p>
+</div>
+</li>
+<li><p class="first">Click <strong>Save</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="creating-the-load-balancer-service">
+<span id="haproxyinstall"></span><h3>Creating the Load Balancer Service<a class="headerlink" href="#creating-the-load-balancer-service" title="Permalink to this headline">¶</a></h3>
+<p>To take advantage of a scale out web tier, your application needs to be able to load balance connections across multiple web server VMs. HAProxy is a free, open source TCP/HTTP load balancer used to distribute workloads across multiple servers. It can be used anywhere from small, simple deployments to large web-scale environments such as GitHub, Instagram, and Twitter.</p>
+<ol class="arabic">
+<li><p class="first">In <strong>Application Overview &gt; Services</strong>, add an additional service.</p>
+</li>
+<li><p class="first">Select the new service and fill out the following <strong>VM</strong> fields in the <strong>Configuration Panel</strong>:</p>
+<ul>
+<li><p class="first"><strong>Service Name</strong> - HAProxy</p>
+</li>
+<li><p class="first"><strong>Name</strong> - HAProxyAHV</p>
+</li>
+<li><p class="first"><strong>Cloud</strong> - Nutanix</p>
+</li>
+<li><p class="first"><strong>OS</strong> - Linux</p>
+</li>
+<li><p class="first"><strong>VM Name</strong> - &#64;&#64;{User_initials}&#64;&#64;-HAProxy-&#64;&#64;{calm_array_index}&#64;&#64;</p>
+</li>
+<li><p class="first"><strong>Image</strong> - CentOS_7_Cloud</p>
+</li>
+<li><p class="first"><strong>Device Type</strong> - Disk</p>
+</li>
+<li><p class="first"><strong>Device Bus</strong> - SCSI</p>
+</li>
+<li><p class="first">Select <strong>Bootable</strong></p>
+</li>
+<li><p class="first"><strong>vCPUs</strong> - 2</p>
+</li>
+<li><p class="first"><strong>Cores per vCPU</strong> - 1</p>
+</li>
+<li><p class="first"><strong>Memory (GiB)</strong> - 4</p>
+</li>
+<li><p class="first">Select <strong>Guest Customization</strong></p>
+<ul>
+<li><p class="first"><strong>Type</strong> - Cloud-init</p>
+</li>
+<li><p class="first"><strong>Script</strong> -</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1">#cloud-config</span>
+users:
+  - name: centos
+    ssh-authorized-keys:
+      - @@<span class="o">{</span>CENTOS.public_key<span class="o">}</span>@@
+    sudo: <span class="o">[</span><span class="s1">&#39;ALL=(ALL) NOPASSWD:ALL&#39;</span><span class="o">]</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p class="first">Select <em class="fa fa-plus-circle"></em> under <strong>Network Adapters (NICs)</strong></p>
+</li>
+<li><p class="first"><strong>NIC 1</strong> - Primary</p>
+</li>
+<li><p class="first"><strong>Credential</strong> - CENTOS</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Select the <strong>Package</strong> tab.</p>
+</li>
+<li><p class="first">Specify a <strong>Package Name</strong> and click <strong>Configure install</strong>.</p>
+<ul class="simple">
+<li><strong>Package Name</strong> - HAProxy_PACKAGE</li>
+</ul>
+</li>
+<li><p class="first">Select <strong>+ Task</strong>, and fill out the following fields in the <strong>Configuration Panel</strong>:</p>
+<ul>
+<li><p class="first"><strong>Name Task</strong> - Install_HAProxy</p>
+</li>
+<li><p class="first"><strong>Type</strong> - Execute</p>
+</li>
+<li><p class="first"><strong>Script Type</strong> - Shell</p>
+</li>
+<li><p class="first"><strong>Credential</strong> - CENTOS</p>
+</li>
+<li><p class="first"><strong>Script</strong> -</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span> -ex
+
+sudo yum update -y
+sudo yum install -y haproxy
+sudo setenforce <span class="m">0</span>
+sudo sed -i <span class="s1">&#39;s/enforcing/disabled/g&#39;</span> /etc/selinux/config /etc/selinux/config
+sudo systemctl stop firewalld <span class="o">||</span> <span class="nb">true</span>
+sudo systemctl disable firewalld <span class="o">||</span> <span class="nb">true</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;global</span>
+<span class="s2"> log 127.0.0.1 local0</span>
+<span class="s2"> log 127.0.0.1 local1 notice</span>
+<span class="s2"> maxconn 4096</span>
+<span class="s2"> quiet</span>
+<span class="s2"> user haproxy</span>
+<span class="s2"> group haproxy</span>
+<span class="s2">defaults</span>
+<span class="s2"> log global</span>
+<span class="s2"> mode http</span>
+<span class="s2"> retries 3</span>
+<span class="s2"> timeout client 50s</span>
+<span class="s2"> timeout connect 5s</span>
+<span class="s2"> timeout server 50s</span>
+<span class="s2"> option dontlognull</span>
+<span class="s2"> option httplog</span>
+<span class="s2"> option redispatch</span>
+<span class="s2"> balance roundrobin</span>
+<span class="s2"># Set up application listeners here.</span>
+<span class="s2">listen admin</span>
+<span class="s2"> bind 127.0.0.1:22002</span>
+<span class="s2"> mode http</span>
+<span class="s2"> stats uri /</span>
+<span class="s2">frontend http</span>
+<span class="s2"> maxconn 2000</span>
+<span class="s2"> bind 0.0.0.0:80</span>
+<span class="s2"> default_backend servers-http</span>
+<span class="s2">backend servers-http&quot;</span> <span class="p">|</span> sudo tee /etc/haproxy/haproxy.cfg
+
+<span class="nv">hosts</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;@@{WebServer.address}@@&quot;</span> <span class="p">|</span> tr <span class="s2">&quot;,&quot;</span> <span class="s2">&quot;\n&quot;</span><span class="k">)</span>
+<span class="nv">port</span><span class="o">=</span><span class="m">80</span>
+
+<span class="k">for</span> host in <span class="nv">$hosts</span>
+  <span class="k">do</span> <span class="nb">echo</span> <span class="s2">&quot; server host-</span><span class="si">${</span><span class="nv">host</span><span class="si">}</span><span class="s2"> </span><span class="si">${</span><span class="nv">host</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">port</span><span class="si">}</span><span class="s2"> weight 1 maxconn 100 check&quot;</span> <span class="p">|</span> sudo tee -a /etc/haproxy/haproxy.cfg
+<span class="k">done</span>
+
+sudo systemctl daemon-reload
+sudo systemctl <span class="nb">enable</span> haproxy
+sudo systemctl restart haproxy
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Note the use of the &#64;&#64;{WebServer.address}&#64;&#64; macro in the script above. The macro returns a comma delimited list of all IPs of the VMs within that service. The script then uses the <a class="reference external" href="https://www.geeksforgeeks.org/tr-command-unixlinux-examples/">tr</a> command to replace commas with carriage returns. The result is an array, <strong>$hosts</strong>, containing strings of all WebServer IP addresses. Those addresses are then each added to the <strong>HAProxy</strong> configuration file.</p>
+</li>
+<li><p class="first">Select the <strong>Package</strong> tab and click <strong>Configure uninstall</strong>.</p>
+</li>
+<li><p class="first">Select <strong>+ Task</strong>, and fill out the following fields in the <strong>Configuration Panel</strong>:</p>
+<ul>
+<li><p class="first"><strong>Name Task</strong> - Uninstall_HAProxy</p>
+</li>
+<li><p class="first"><strong>Type</strong> - Execute</p>
+</li>
+<li><p class="first"><strong>Script Type</strong> - Shell</p>
+</li>
+<li><p class="first"><strong>Credential</strong> - CENTOS</p>
+</li>
+<li><p class="first"><strong>Script</strong> -</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span> -ex
+
+sudo
+yum -y erase haproxy
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p class="first">Click <strong>Save</strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="adding-dependencies">
+<h2>Adding Dependencies<a class="headerlink" href="#adding-dependencies" title="Permalink to this headline">¶</a></h2>
+<p>As our application will require the database to be running before the web server starts, our Blueprint requires a dependency to enforce this ordering.  There are a couple of ways to do this, one of which you’ve already done without likely realizing it.</p>
+<ol class="arabic">
+<li><p class="first">In the <strong>Application Overview &gt; Application Profile</strong> section, expand the <strong>Default</strong> Application Profile and click the <strong>Create</strong> Action.</p>
+<div class="figure">
+<img alt="../_images/13.png" src="../_images/13.png" />
+</div>
+<p>Take note of the <strong>Orange Orchestration Edge</strong> going from the <strong>MySQL Start</strong> task to the <strong>WebServer Package Install</strong> task. This edge was automatically created by Calm due to the <strong>&#64;&#64;{MySQL.address}&#64;&#64;</strong> macro reference in the <strong>WebServer Package Install</strong> task. Since the system needs to know the IP Address of the MySQL service prior to being able to proceed with the WebServer Install task, Calm intelligently creates the orchestration edge for you. This requires the MySQL service to be started prior to moving on to the WebServer Install task.</p>
+</li>
+<li><p class="first">Return to the <strong>HAProxy Package Install</strong> task, why are orchestration edges automatically created between the WebServer and HAProxy services?</p>
+</li>
+<li><p class="first">Next, select the <strong>Stop</strong> Profile Action.</p>
+<p>Note that lack of orchestration edges between services when stopping an application. Why might issuing shutdown commands to all services within the application simultaneously create an issue?</p>
+</li>
+<li><p class="first">Click on each Profile Action to take note of the current presence (or lack thereof) of the orchestration edges.</p>
+<div class="figure">
+<img alt="../_images/14.png" src="../_images/14.png" />
+</div>
+<p>To resolve this, you’ll manually define a dependencies between services.</p>
+</li>
+<li><p class="first">Select the <strong>WebServer</strong> Service and click the <strong>Create Dependency</strong> icon that appears above the Service icon, and then click on the <strong>MySQL</strong> service.</p>
+<div class="figure">
+<img alt="../_images/15.png" src="../_images/15.png" />
+</div>
+</li>
+<li><p class="first">This represents that the <strong>WebServer</strong> service “depends” upon the <strong>MySQL</strong> service, meaning the <strong>MySQL</strong> service will start before, and stop after, the <strong>WebServer</strong> service.</p>
+</li>
+<li><p class="first">Now create a dependency for the <strong>HAProxy</strong> service to depend on the <strong>WebServer</strong> service.</p>
+</li>
+<li><p class="first">Click <strong>Save</strong>.</p>
+</li>
+<li><p class="first">Re-visit the Profile Actions and confirm the edges now properly reflect the dependencies between the services, as shown below:</p>
+<div class="figure">
+<img alt="../_images/16.png" src="../_images/16.png" />
+</div>
+<p>Drawing the white dependency arrows will cause Calm to create orchestration edges for all <strong>System Defined Profile Actions</strong> (Create, Start, Restart, Stop, Delete, and Soft Delete).</p>
+</li>
+</ol>
+</div>
+<div class="section" id="launching-and-managing-the-application">
+<h2>Launching and Managing the Application<a class="headerlink" href="#launching-and-managing-the-application" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">From the upper toolbar in the Blueprint Editor, click <strong>Launch</strong>.</p>
+</li>
+<li><p class="first">Specify a unique <strong>Application Name</strong> (e.g. <em>Initials</em>-CalmLinuxIntro1) and your <strong>User_initials</strong> Runtime variable value for VM naming.</p>
+</li>
+<li><p class="first">Click <strong>Create</strong>.</p>
+<p>The <strong>Audit</strong> tab can be used to monitor the deployment of the application.</p>
+<p>Why don’t all of the CentOS based services deploy at the same time following the download of the disk image?</p>
+</li>
+<li><p class="first">Once the application reaches a <strong>Running</strong> status, navigate to the <strong>Services</strong> tab and select the <strong>HAProxy</strong> service to determine the IP address of your load balancer.</p>
+</li>
+<li><p class="first">In a new browser tab or window, navigate to http://&lt;HAProxy-IP&gt;, and verify your Task Manager application is functioning.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can also click the link in the Description of the Application.</p>
+</div>
+<div class="figure">
+<img alt="../_images/17.png" src="../_images/17.png" />
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="takeaways">
+<h2>Takeaways<a class="headerlink" href="#takeaways" title="Permalink to this headline">¶</a></h2>
+<p>What are the key things you should know about <strong>Nutanix Calm</strong>?</p>
+<ul class="simple">
+<li>Nutanix Calm, as a native component of Prism, is built on and carries forward the benefits of the platform.  The simplicity provided by Acropolis lets Calm focus on applications, rather than trying to mask the complexity of the underlying infrastructure management.</li>
+<li>Calm blueprints are easy to use.  In 60 minutes you went from nothing to a full infrastructure stack deployment.  Because Calm uses standard tools for configuration - bash, PowerShell, Python, etc. - there’s no new language to learn and you can immediately apply skills and code you already have.</li>
+<li>While not as visually impressive, even single VM blueprints can have a massive effect on customers.  One bank in India is using Calm for single-VM deployments, reducing the time to deploy these applications from 3 days to 2 hours.  Remember that many customers have little or no automation today (or the automation they have is complex/hard to understand thus limiting it’s adoption).  This means that Calm can help them right now, today, instantly.</li>
+<li>“Multi-Cloud Application Automation and Lifecycle Management” sounds big and scary.  The ‘future’ sounds amazing, but many operators can’t see the path to there.  Listen to what the customer is struggling with today (backups require specialized skills, VM deployment takes a long time, upgrades are hard) and speak to how Calm can help with that; jumping right to the multi-cloud automation story pushes Calm from a “I need this right now” to a “well let’s evaluate this later on, once things have quieted down” (and things never truly ‘quiet down’.</li>
+<li>The Blueprint Editor provides a simple UI for modeling potentially complex applications.</li>
+<li>Blueprints are tied to SSP Projects which can be used to enforce quotas and role based access control.</li>
+<li>Having a Blueprint install and configure binaries means no longer creating specific images for individual applications. Instead the application can be modified through changes to the Blueprint or installation script, both of which can be stored in source code repositories.</li>
+<li>Variables allow another dimension of customizing an application without having to edit the underlying Blueprint.</li>
+<li>There are multiple ways of authenticating to a VM (keys or passwords), which is dependent upon the source image.</li>
+<li>Application status can be monitored in real time.</li>
+<li>Applications typically span across multiple VMs, each responsible for different services. Calm is capable of automated and orchestrating full applications.</li>
+<li>Dependencies between services can be easily modeled in the Blueprint Editor.</li>
+<li>Users can quickly provision entire application stacks for production or testing for repeatable results without time lost to manual configuration.</li>
+<li>Interested in using Calm for more app lifecycle operations? Check out the <a class="reference internal" href="../calm_day2/calm_day2.html#calm-day2"><span class="std std-ref">Calm: Day 2 Operations</span></a>!</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/calm_linux/calm_linux.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019 Nutanix.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

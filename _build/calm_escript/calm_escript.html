@@ -1,0 +1,669 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Calm: EScript and Task Library</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Calm: Marketplace" href="../calm_marketplace/calm_marketplace.html" />
+    <link rel="prev" title="Calm: Day 2 Operations" href="../calm_day2/calm_day2.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  </head><body>
+
+  <div id="navbar" class="navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/NutanixWorkshops.svg"></span>
+           </a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html"> <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Calm</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../what_is_calm/what_is_calm.html">What Is Calm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#what-is-the-state-of-things-today">What is the State of Things Today</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#managing-apps-is-increasingly-challenging">Managing Apps Is Increasingly Challenging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#how-does-nutanix-solve-this-problem">How Does Nutanix Solve This Problem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#foundation-for-enterprise-cloud">Foundation For Enterprise Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#delivering-the-enterprise-cloud-vision">Delivering the Enterprise Cloud Vision</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#delivering-the-enterprise-cloud-vision-multi-cloud">Delivering the Enterprise Cloud Vision: Multi-Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#calm-application-lifecycle-automation">Calm: Application Lifecycle Automation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#blueprints-capture-all-elements-of-the-application">Blueprints Capture All Elements of the Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#make-sense-of-complexity-in-a-visual-way">Make Sense of Complexity in a Visual Way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#blueprints-are-flexible-and-open">Blueprints Are Flexible and Open</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#blueprints-are-used-for-lifecycle-management">Blueprints Are Used for Lifecycle Management</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#calm-self-service-and-governance">Calm: Self-Service and Governance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#nutanix-marketplace-empowers-self-service">Nutanix Marketplace Empowers Self-Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#deploy-in-one-click">Deploy in One-Click</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#end-to-end-audits-and-governance">End-to-End Audits and Governance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#calm-hybrid-cloud-management">Calm: Hybrid Cloud Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#hybrid-cloud-management">Hybrid Cloud Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#deploy-across-clouds-based-on-need">Deploy across Clouds Based on Need</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#automate-empower-relax">Automate. Empower. Relax</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_enable/calm_enable.html">Calm: Enable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_enable/calm_enable.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_enable/calm_enable.html#enabling-app-management">Enabling App Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_enable/calm_enable.html#adding-active-directory">Adding Active Directory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_projects/calm_projects.html">Calm: Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_projects/calm_projects.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_projects/calm_projects.html#creating-a-project">Creating A Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_projects/calm_projects.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_linux/calm_linux.html">Calm: Linux Workloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-a-blueprint">Creating a Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-credentials">Creating Credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#defining-variables">Defining Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#adding-a-downloadable-image">Adding a Downloadable Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-services">Creating Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-the-database-service">Creating the Database Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-the-web-server-service">Creating the Web Server Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-the-load-balancer-service">Creating the Load Balancer Service</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#adding-dependencies">Adding Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#launching-and-managing-the-application">Launching and Managing the Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_win/calm_win.html">Calm: Windows Workloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#creating-the-blueprint">Creating the Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#adding-services">Adding Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#defining-package-install">Defining Package Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#launching-the-blueprint">Launching the Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#optional-scale-out-iis-tier">(Optional) Scale Out IIS Tier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#optional-managing-mssql-with-era">(Optional) Managing MSSQL with Era</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_day2/calm_day2.html">Calm: Day 2 Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#lab-setup">Lab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#scaling-out">Scaling Out</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#scaling-in">Scaling In</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#upgrading">Upgrading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#launching-and-managing-the-application">Launching and Managing the Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#optional-variable-scaling">(Optional) Variable Scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_day2/calm_day2.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Calm: EScript and Task Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lab-setup">Lab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-existing-machine-services">Using Existing Machine Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#restlist-custom-action">RESTList Custom Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getdefaultsubnet-custom-action">GetDefaultSubnet Custom Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-custom-actions">Running the Custom Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#publishing-to-the-task-library">Publishing to the Task Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html">Calm: Marketplace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#calm-marketplace-part-1">Calm Marketplace Part 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#publishing-blueprints-from-marketplace-manager">Publishing Blueprints from Marketplace Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#cloning-blueprints-from-marketplace">Cloning Blueprints from Marketplace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#editing-cloned-blueprint">Editing Cloned Blueprint</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#calm-marketplace-part-2">Calm Marketplace Part 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#publishing-blueprints">Publishing Blueprints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#approving-blueprints">Approving Blueprints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#configuring-project-environment">Configuring Project Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#launching-blueprint-from-the-marketplace">Launching Blueprint from the Marketplace</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Optional Labs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../flow_assign_categories_in_calm/flow_assign_categories_in_calm.html">Flow: Assign Categories inside Calm Blueprint (Optional)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../flow_assign_categories_in_calm/flow_assign_categories_in_calm.html#using-flow-with-calm">Using Flow with Calm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flow_assign_categories_in_calm/flow_assign_categories_in_calm.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Karbon</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html">Windows Tools VM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html#deploying-tools-vm">Deploying Tools VM</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/index.html">Karbon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../karbon/index.html#what-are-containers">What are Containers?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../karbon/index.html#container-benefits-and-issues">Container Benefits and Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../karbon/index.html#introducing-kubernetes">Introducing Kubernetes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#lab-setup">Lab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#creating-a-karbon-cluster">Creating a Karbon Cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#getting-started-with-kubectl">Getting Started with Kubectl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#deploying-an-application">Deploying an Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#accessing-wordpress">Accessing Wordpress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#exploring-logging-visualization">Exploring Logging &amp; Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#coming-soon">Coming Soon!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#takeaways">Takeaways</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#additional-kubernetes-training-resources">Additional Kubernetes Training Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/windows_tools_vm.html">Windows Tools VM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/windows_tools_vm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/windows_tools_vm.html#deploying-tools-vm">Deploying Tools VM</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/linux_tools_vm.html">Linux Tools VM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/linux_tools_vm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/linux_tools_vm.html#deploying-centos">Deploying CentOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/linux_tools_vm.html#verify-tools-install">Verify Tools Install</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><p class="caption"><span class="caption-text">Calm</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../what_is_calm/what_is_calm.html">What Is Calm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_enable/calm_enable.html">Calm: Enable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_projects/calm_projects.html">Calm: Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_linux/calm_linux.html">Calm: Linux Workloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_win/calm_win.html">Calm: Windows Workloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_day2/calm_day2.html">Calm: Day 2 Operations</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Calm: EScript and Task Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lab-setup">Lab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-existing-machine-services">Using Existing Machine Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#restlist-custom-action">RESTList Custom Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getdefaultsubnet-custom-action">GetDefaultSubnet Custom Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#running-the-custom-actions">Running the Custom Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#publishing-to-the-task-library">Publishing to the Task Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html">Calm: Marketplace</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Optional Labs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../flow_assign_categories_in_calm/flow_assign_categories_in_calm.html">Flow: Assign Categories inside Calm Blueprint (Optional)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Karbon</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html">Windows Tools VM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/index.html">Karbon</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/windows_tools_vm.html">Windows Tools VM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/linux_tools_vm.html">Linux Tools VM</a></li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <p><em>Script Provided Below</em>.. _calm_escript:</p>
+<div class="section" id="calm-escript-and-task-library">
+<h1>Calm: EScript and Task Library<a class="headerlink" href="#calm-escript-and-task-library" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>In the <a class="reference internal" href="../calm_linux/calm_linux.html#calm-linux"><span class="std std-ref">Calm: Linux Workloads</span></a> and <a class="reference internal" href="../calm_win/calm_win.html#calm-win"><span class="std std-ref">Calm: Windows Workloads</span></a> labs you explored how Calm can utilize Bash and PowerShell scripts to automate application deployments. While shell scripts can be both powerful and versatile, they require the deployment of an endpoint VM on which to copy and execute the script locally.</p>
+<p>There are use cases that would be better served to execute code directly within Calm, such as making API calls to other RESTful services like Nutanix Era, GitHub, IFTTT, etc.</p>
+<p>To fill this need, Calm offers a script type called <a class="reference external" href="https://portal.nutanix.com/#/page/docs/details?targetId=Nutanix-Calm-Admin-Operations-Guide-v250:nuc-supported-escript-modules-functions-c.html">EScript</a>. Short for Epsilon Script (Epsilon is the orchestration engine that drives Calm), EScript is a sandboxed Python interpreter. It contains many commonly used modules for scripting and automation. In particular, it contains the <strong>requests</strong> module as <strong>urlreq</strong>, used to create external API calls.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The interpreter is sandboxed because the script runs <strong>directly</strong> within the Calm engine, which means it runs directly within Prism Central.  Allowing the user to import unknown and unvetted modules into Prism Central is a security concern.</p>
+</div>
+<p><strong>In this lab you will leverage EScript to perform API calls against an existing web service, your Prism Central VM. You will also leverage Set Variable to set the data returned from an API call to a Calm macro, and the Task Library to understand how common code can be used across multiple blueprints or projects.</strong></p>
+</div>
+<div class="section" id="lab-setup">
+<h2>Lab Setup<a class="headerlink" href="#lab-setup" title="Permalink to this headline">¶</a></h2>
+<p>This lab assumes basic familiarity with Nutanix Calm.</p>
+<p><strong>It does NOT require the Task Manager application deployed as part of other Calm labs.</strong> Instead, you will create a new, blank Blueprint and add a credential used to authenticate to Prism Central.</p>
+<ol class="arabic">
+<li><p class="first">In <strong>Prism Central</strong>, select <em class="fa fa-bars"></em> <strong>&gt; Services &gt; Calm &gt; Blueprints</strong>.</p>
+</li>
+<li><p class="first">Click <strong>+ Create Blueprint &gt; Multi VM/Pod Blueprint</strong>.</p>
+<div class="figure">
+<img alt="../_images/create_blueprint.png" src="../_images/create_blueprint.png" />
+</div>
+</li>
+<li><p class="first">Fill out the following fields and click <strong>Proceed</strong>:</p>
+<ul class="simple">
+<li><strong>Name</strong> - <em>Initials</em>-EScript</li>
+<li><strong>Description</strong> - My First EScript Blueprint</li>
+<li><strong>Project</strong> - <em>Initials</em>-Calm</li>
+</ul>
+</li>
+<li><p class="first">From the toolbar along the top of the blueprint, click <strong>Credentials</strong>.</p>
+</li>
+<li><p class="first">Click <strong>Credentials</strong> <em class="fa fa-plus-circle"></em> and fill out the following fields:</p>
+<ul class="simple">
+<li><strong>Credential Name</strong> - PC_Creds</li>
+<li><strong>Username</strong> - admin</li>
+<li><strong>Secret Type</strong> - Password</li>
+<li><strong>Password</strong> - <em>Your Prism Central admin Password</em></li>
+</ul>
+<div class="figure">
+<img alt="../_images/credentials.png" src="../_images/credentials.png" />
+</div>
+</li>
+<li><p class="first">Click <strong>Save</strong> and then <strong>Back</strong>, ensuring no errors or warnings appear.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="using-existing-machine-services">
+<h2>Using Existing Machine Services<a class="headerlink" href="#using-existing-machine-services" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">In <strong>Application Overview &gt; Services</strong>, click <em class="fa fa-plus-circle"></em> to add a new Service.</p>
+</li>
+<li><p class="first">Under the <strong>VM</strong> tab, fill in the following fields:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="63%" />
+<col width="38%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Service Name</strong></td>
+<td>PC</td>
+</tr>
+<tr class="row-even"><td><strong>Name</strong></td>
+<td>PrismCentral</td>
+</tr>
+<tr class="row-odd"><td><strong>Cloud</strong></td>
+<td>Existing Machine</td>
+</tr>
+<tr class="row-even"><td><strong>Operating System</strong></td>
+<td>Linux</td>
+</tr>
+<tr class="row-odd"><td><strong>IP Address</strong></td>
+<td>localhost</td>
+</tr>
+<tr class="row-even"><td><strong>Check log-in upon create</strong></td>
+<td><strong>Unselect</strong></td>
+</tr>
+<tr class="row-odd"><td><strong>Credential</strong></td>
+<td>Leave default</td>
+</tr>
+<tr class="row-even"><td><strong>Address</strong></td>
+<td>Leave default</td>
+</tr>
+<tr class="row-odd"><td><strong>Connection Type</strong></td>
+<td>Leave default</td>
+</tr>
+<tr class="row-even"><td><strong>Connection Port</strong></td>
+<td>Leave default</td>
+</tr>
+<tr class="row-odd"><td><strong>Delay</strong></td>
+<td>Leave default</td>
+</tr>
+</tbody>
+</table>
+<div class="figure">
+<img alt="../_images/existing_machine.png" src="../_images/existing_machine.png" />
+</div>
+<p>There are several new and interesting items in the above configuration:</p>
+<ul class="simple">
+<li><strong>Cloud</strong> - Instead of creating a new VM on Nutanix or a public cloud provider, we’re instead choosing to automate against an already existing machine. All that’s required for us to enter is an IP Address of the machine, which in our case is Prism Central. Depending on your use case, you may specify something like Ansible Tower, or an Era Server, as an existing machine.</li>
+<li><strong>IP Address</strong> - Since we’re going to be making API Calls against Prism Central, and Calm runs directly in Prism Central, we’re just entering localhost as an IP. If you were going to be automating against something like Ansible Tower or Era, you would need to put your Ansible Tower or Era Server IP addresses in this field, rather than localhost. IP Address could also be defined by a variable.</li>
+<li><strong>Check log-in upon create</strong> - This is the first time we’ve seen this box unselected. Since EScript tasks run directly within Calm, there’s no need to SSH in to the Service in question. Instead we’ll use credentials directly within the EScript code to authenticate our REST API call.</li>
+</ul>
+</li>
+<li><p class="first">Click <strong>Save</strong>, and ensure no errors or warnings appear.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="restlist-custom-action">
+<h2>RESTList Custom Action<a class="headerlink" href="#restlist-custom-action" title="Permalink to this headline">¶</a></h2>
+<p>In this exercise, we’re going to be creating a custom action for our application to make a REST API call against Prism Central. Specifically, it will be a POST /list call, where the entity (kind) to be listed (e.g. apps, hosts, clusters, roles, etc.) will be defined by a variable at runtime. The results of this call will then be output.</p>
+<ol class="arabic">
+<li><p class="first">In the <strong>Application Overview &gt; Application Profile</strong> section, expand the <strong>Default</strong> Application Profile.</p>
+<div class="figure">
+<img alt="../_images/addaction.png" src="../_images/addaction.png" />
+</div>
+</li>
+<li><p class="first">Select <em class="fa fa-plus-circle"></em> next to <strong>Actions</strong> to add a new, custom action.</p>
+</li>
+<li><p class="first">On the <strong>Configuration Pane</strong> to the right, name the action <strong>RESTList</strong>, and add a single variable:</p>
+<ul class="simple">
+<li><strong>Name</strong> - kind</li>
+<li><strong>Data Type</strong> - String</li>
+<li><strong>Value</strong> - apps</li>
+<li>Select <strong>Runtime</strong> by toggling the running man icon in the upper right to blue</li>
+</ul>
+<div class="figure">
+<img alt="../_images/restlist.png" src="../_images/restlist.png" />
+</div>
+<p>When running the custom action later, Calm will prompt the user for input. <strong>Apps</strong> will be pre-filled default value, but it can be changed prior to executing the script action.</p>
+</li>
+<li><p class="first">Click the <strong>+ Task</strong> button to add a task to the <strong>RESTList</strong> custom action.  Fill in the following fields:</p>
+<ul class="simple">
+<li><strong>Task Name</strong> - RuntimePost</li>
+<li><strong>Type</strong> - Execute</li>
+<li><strong>Script Type</strong> - EScript</li>
+<li><strong>Script</strong> - <em>Script Provided Below</em></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Set the credentials</span>
+<span class="n">pc_user</span> <span class="o">=</span> <span class="s1">&#39;@@</span><span class="si">{PC_Creds.username}</span><span class="s1">@@&#39;</span>
+<span class="n">pc_pass</span> <span class="o">=</span> <span class="s1">&#39;@@</span><span class="si">{PC_Creds.secret}</span><span class="s1">@@&#39;</span>
+
+<span class="c1"># Set the headers, url, and payload</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span> <span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">}</span>
+<span class="n">url</span>     <span class="o">=</span> <span class="s2">&quot;https://@@</span><span class="si">{address}</span><span class="s2">@@:9440/api/nutanix/v3/@@</span><span class="si">{kind}</span><span class="s2">@@/list&quot;</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># Make the request</span>
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urlreq</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">verb</span><span class="o">=</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="s1">&#39;BASIC&#39;</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">pc_user</span><span class="p">,</span> <span class="n">passwd</span><span class="o">=</span><span class="n">pc_pass</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">payload</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+
+<span class="c1"># If the request went through correctly, print it out.  Otherwise error out, and print the response.</span>
+<span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">ok</span><span class="p">:</span>
+   <span class="nb">print</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">content</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+   <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="nb">print</span> <span class="s2">&quot;Post request failed&quot;</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">content</span>
+   <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure">
+<img alt="../_images/runtime_post.png" src="../_images/runtime_post.png" />
+</div>
+<p>There are some new and interesting features of this task:</p>
+<p>Note how there is not a Credential dropdown within the Calm UI, and instead we’re setting Python variables equal to our PC_Creds username and password specified earlier. Other APIs may not require authentication, or require an API key to be provided as part of the URL.</p>
+<p>We also see the <a class="reference external" href="https://portal.nutanix.com/#/page/docs/details?targetId=Nutanix-Calm-Admin-Operations-Guide-v250:nuc-supported-escript-modules-functions-c.html">urlreq</a> module being used, which is the exact line that our API call is made. If the response returns as expected, the JSON response will be formatted and printed, otherwise the corresponding error message will be printed.</p>
+</li>
+<li><p class="first">Click <strong>Save</strong>, and ensure no errors or warnings appear.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="getdefaultsubnet-custom-action">
+<h2>GetDefaultSubnet Custom Action<a class="headerlink" href="#getdefaultsubnet-custom-action" title="Permalink to this headline">¶</a></h2>
+<p>In this exercise, we’re going to create an additional custom action to make a different REST API call. The call will return the list of <strong>Projects</strong> on this Prism Central instance.  We’ll then parse the output of that API call to get the UUID of the default subnet configured for the project that the running application belongs to.  This UUID will be set as a Calm variable, allowing for re-use elsewhere in the blueprint.  We’ll then do another Rest API call, a GET on the default subnet (utilizing this newly set variable).</p>
+<ol class="arabic">
+<li><p class="first">Select the <strong>PC</strong> service. In the <strong>Configuration Pane</strong>, select the <strong>Service</strong> tab. Add a variable named <strong>SUBNET</strong>, leaving all other fields blank.</p>
+<div class="figure">
+<img alt="../_images/subnet_variable.png" src="../_images/subnet_variable.png" />
+</div>
+</li>
+<li><p class="first">In the <strong>Application Overview &gt; Application Profile &gt; Default</strong>, section, select <em class="fa fa-plus-circle"></em> next to <strong>Actions</strong> to add a new, custom action.</p>
+</li>
+<li><p class="first">Name the action <strong>GetDefaultSubnet</strong>.</p>
+<div class="figure">
+<img alt="../_images/get_default_subnet.png" src="../_images/get_default_subnet.png" />
+</div>
+</li>
+<li><p class="first">Click the <strong>+ Task</strong> button to add a task to the <strong>GetDefaultSubnet</strong> custom action.  Fill in the following fields:</p>
+<ul class="simple">
+<li><strong>Task Name</strong> - GetSubnetUUID</li>
+<li><strong>Type</strong> - Set Variable</li>
+<li><strong>Script Type</strong> - EScript</li>
+<li><strong>Script</strong> - <em>Script Provided Below</em></li>
+<li><strong>Output</strong> - SUBNET</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the JWT</span>
+<span class="n">jwt</span> <span class="o">=</span> <span class="s1">&#39;@@</span><span class="si">{calm_jwt}</span><span class="s1">@@&#39;</span>
+
+<span class="c1"># Set the headers, url, and payload</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span> <span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span> <span class="s1">&#39;Authorization&#39;</span><span class="p">:</span> <span class="s1">&#39;Bearer </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">jwt</span><span class="p">)}</span>
+<span class="n">url</span>     <span class="o">=</span> <span class="s2">&quot;https://@@</span><span class="si">{address}</span><span class="s2">@@:9440/api/nutanix/v3/projects/list&quot;</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># Make the request</span>
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urlreq</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">verb</span><span class="o">=</span><span class="s1">&#39;POST&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">payload</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># If the request went through correctly</span>
+<span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">ok</span><span class="p">:</span>
+
+ <span class="c1"># Cycle through the project &quot;entities&quot;, and check if its name matches the current project</span>
+ <span class="k">for</span> <span class="n">project</span> <span class="ow">in</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">content</span><span class="p">)[</span><span class="s1">&#39;entities&#39;</span><span class="p">]:</span>
+   <span class="k">if</span> <span class="n">project</span><span class="p">[</span><span class="s1">&#39;spec&#39;</span><span class="p">][</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;@@</span><span class="si">{calm_project_name}</span><span class="s1">@@&#39;</span><span class="p">:</span>
+
+     <span class="c1"># If there&#39;s a default subnet reference, print UUID to set variable and exit success, otherwise error out</span>
+     <span class="k">if</span> <span class="s1">&#39;uuid&#39;</span> <span class="ow">in</span> <span class="n">project</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">][</span><span class="s1">&#39;resources&#39;</span><span class="p">][</span><span class="s1">&#39;default_subnet_reference&#39;</span><span class="p">]:</span>
+       <span class="nb">print</span> <span class="s2">&quot;SUBNET=</span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">project</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">][</span><span class="s1">&#39;resources&#39;</span><span class="p">][</span><span class="s1">&#39;default_subnet_reference&#39;</span><span class="p">][</span><span class="s1">&#39;uuid&#39;</span><span class="p">])</span>
+       <span class="n">exit</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+     <span class="k">else</span><span class="p">:</span>
+       <span class="nb">print</span> <span class="s2">&quot;The &#39;@@</span><span class="si">{calm_project_name}</span><span class="s2">@@&#39; project does not have a default subnet set.&quot;</span>
+       <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+ <span class="c1"># If we&#39;ve reached this point in the code, none of our projects matched the calm_project_name macro</span>
+ <span class="nb">print</span> <span class="s2">&quot;The &#39;@@</span><span class="si">{calm_project_name}</span><span class="s2">@@&#39; project does not match any of our /projects/list api call.&quot;</span>
+ <span class="nb">print</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">content</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+ <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># In case the request returns an error</span>
+<span class="k">else</span><span class="p">:</span>
+ <span class="nb">print</span> <span class="s2">&quot;Post clusters/list request failed&quot;</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">content</span>
+ <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="figure">
+<img alt="../_images/get_subnet_uuid.png" src="../_images/get_subnet_uuid.png" />
+</div>
+<p>There are two key differences between the <strong>RESTList</strong> and <strong>GetDefaultSubnet</strong> tasks. The first difference is the use of the <strong>Set Variable</strong> task type. Take note of the <strong>print “SUBNET={0}”</strong> line: Calm will parse output in the format of <strong>variable=value</strong>, and set the variable equal to the value.  In this example, we’re printing the variable called <strong>SUBNET</strong> is equal to the UUID of the “default_subnet_reference” field in the initial API call response. In the <strong>Output</strong> field below the Script body, we must paste in the variable name for Calm to set the variable appropriately. The variable must already be defined in the Calm blueprint, whether globally, or in this case, as a variable local to the <strong>PC</strong> service.</p>
+<p>The second difference is that the <strong>PC_Cred</strong> credential was not used to authorize the API call against Prism Central. Instead, we’re using a <a class="reference external" href="https://en.wikipedia.org/wiki/JSON_Web_Token">JSON Web Token</a> provided by the built-in <strong>calm_jwt</strong> macro.</p>
+</li>
+<li><p class="first">Click the <strong>+ Task</strong> button again to add a second task to the <strong>GetDefaultSubnet</strong> custom action.  Fill in the following fields:</p>
+<ul class="simple">
+<li><strong>Task Name</strong> - GetSubnetInfo</li>
+<li><strong>Type</strong> - Execute</li>
+<li><strong>Script Type</strong> - EScript</li>
+<li><strong>Script</strong> - <em>Script Provided Below</em></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the JWT</span>
+<span class="n">jwt</span> <span class="o">=</span> <span class="s1">&#39;@@</span><span class="si">{calm_jwt}</span><span class="s1">@@&#39;</span>
+
+<span class="c1"># Set the headers, url, and payload</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span> <span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span><span class="p">,</span> <span class="s1">&#39;Authorization&#39;</span><span class="p">:</span> <span class="s1">&#39;Bearer </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">jwt</span><span class="p">)}</span>
+<span class="n">url</span>     <span class="o">=</span> <span class="s2">&quot;https://@@</span><span class="si">{address}</span><span class="s2">@@:9440/api/nutanix/v3/subnets/@@</span><span class="si">{SUBNET}</span><span class="s2">@@&quot;</span>
+<span class="n">payload</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="c1"># Make the request</span>
+<span class="n">resp</span> <span class="o">=</span> <span class="n">urlreq</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">verb</span><span class="o">=</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">payload</span><span class="p">),</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">verify</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="c1"># If the request went through correctly, print it out.  Otherwise error out, and print the response.</span>
+<span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">ok</span><span class="p">:</span>
+   <span class="nb">print</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">content</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+   <span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+   <span class="nb">print</span> <span class="s2">&quot;Get request failed&quot;</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">content</span>
+   <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this task we’re dynamically returning details about the default subnet using a GET API call and the <strong>SUBNET</strong> UUID variable returned by the previous task.</p>
+<div class="figure">
+<img alt="../_images/get_subnet_info.png" src="../_images/get_subnet_info.png" />
+</div>
+</li>
+<li><p class="first">Click <strong>Save</strong>, and ensure no errors or warnings appear.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="running-the-custom-actions">
+<h2>Running the Custom Actions<a class="headerlink" href="#running-the-custom-actions" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first"><strong>Launch</strong> the blueprint. Name the application <em>Initials</em><strong>-RestCalls</strong>, and then click <strong>Create</strong>.</p>
+<p>The <strong>Create</strong> task should complete quickly, as no VMs are being provisioned or Package Install scripts being run.</p>
+</li>
+<li><p class="first">Once the application reaches <strong>Running</strong> status, select the <strong>Manage</strong> tab.</p>
+<div class="figure">
+<img alt="../_images/app_create.png" src="../_images/app_create.png" />
+</div>
+</li>
+<li><p class="first">Next, run the <strong>RESTList</strong> action by clicking its <em class="fa fa-play"></em> icon. A new window appears displaying the <strong>kind</strong> variable and default <strong>apps</strong> value. Click <strong>Run</strong>.</p>
+<div class="figure">
+<img alt="../_images/apps_run.png" src="../_images/apps_run.png" />
+</div>
+</li>
+<li><p class="first">In the output on the right pane, maximize the <strong>RuntimePost</strong> task, and view the API output. The output pane can be toggled by clicking the <em class="fa fa-eye"></em> icon. Maximize the output/script window to make viewing easier. As expected, the script returns a JSON body with an array describing each launched application in Calm.</p>
+<div class="figure">
+<img alt="../_images/apps_run2.png" src="../_images/apps_run2.png" />
+</div>
+</li>
+<li><p class="first">Run the <strong>RESTList</strong> action again, altering the value to another <a class="reference external" href="https://developer.nutanix.com/reference/prism_central/v3/">Prism Central API entity</a>, such as <strong>images</strong>, <strong>clusters</strong>, <strong>hosts</strong>, or <strong>vms</strong>.</p>
+</li>
+<li><p class="first">Finally, run the <strong>GetDefaultSubnet</strong> action. Expand both the <strong>GetSubnetUUID</strong> and <strong>GetSubnetInfo</strong> tasks, reviewing the output for each task. What is the name and VLAN id of your default subnet?</p>
+<div class="figure">
+<img alt="../_images/GetDefaultSubnet.png" src="../_images/GetDefaultSubnet.png" />
+</div>
+<div class="figure">
+<img alt="../_images/GetDefaultSubnet2.png" src="../_images/GetDefaultSubnet2.png" />
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="publishing-to-the-task-library">
+<h2>Publishing to the Task Library<a class="headerlink" href="#publishing-to-the-task-library" title="Permalink to this headline">¶</a></h2>
+<p>Tasks such as common API calls, package installations for common services, domain joins, etc. can be broadly applicable to multiple blueprints. These tasks can be used without leveraging third party tools or manually copying and pasting scripts by instead publishing into the Task Library, Calm’s central repository for code re-use.</p>
+<ol class="arabic">
+<li><p class="first">Open your <em>Initials</em><strong>-EScript</strong> blueprint in the Blueprint Editor.</p>
+</li>
+<li><p class="first">In the <strong>Application Overview &gt; Application Profile</strong> pane, select the <strong>RESTList</strong> action.</p>
+</li>
+<li><p class="first">Select the <strong>RuntimeList</strong> task to open the task in the <strong>Configuration Pane</strong>.</p>
+</li>
+<li><p class="first">Click <strong>Publish to Library</strong>.</p>
+</li>
+<li><p class="first">In the <strong>Publish Task</strong> window, make the following changes:</p>
+<ul class="simple">
+<li><strong>Name</strong> - <em>Initials</em> Prism Central Runtime List</li>
+<li>Replace <strong>address</strong> with <strong>Prism_Central_IP</strong></li>
+</ul>
+<div class="figure">
+<img alt="../_images/publish_task.png" src="../_images/publish_task.png" />
+</div>
+</li>
+<li><p class="first">Click <strong>Apply</strong> and note that the original <strong>address</strong> macro was replaced with <strong>Prism_Central_IP</strong> in the script window. Replacing macro names allows you to be more generic or descriptive to increase task portability.</p>
+</li>
+<li><p class="first">Click <strong>Publish</strong>.</p>
+</li>
+<li><p class="first">Open the <strong>Task Library</strong> in the sidebar.  Select your published task. By default, the task will be available to the project from which it was originally published, but you can specify additional projects with which to share the task.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="takeaways">
+<h2>Takeaways<a class="headerlink" href="#takeaways" title="Permalink to this headline">¶</a></h2>
+<p>What are the key things you should know about <strong>Nutanix Calm</strong>?</p>
+<ul class="simple">
+<li>The task library allows commonly used operations to be written once and reused over and over again.  As time goes on more objects will be integrated into the task library, from Nutanix-provided common tasks to entire service objects</li>
+<li>Calm 2.7 introduced the HTTP task, allowing the most common use of Escript to be more easily implemented (sending API calls)</li>
+<li>In addition to being able to use Bash and Powershell scripts, Nutanix Calm can use EScript, which is a sandboxed Python interpreter, to provide application lifecycle management.</li>
+<li>EScript tasks are run directly within the Calm engine, rather than being executed on the remote machine.</li>
+<li>Shell, Powershell, and EScript tasks can all be utilized to set a variable based on script output.  That variable can then be used in other portions of the blueprint.</li>
+<li>The Task Library allows for publishing of commonly used tasks into a central repository, giving the ability to share these scripts across Projects and Blueprints.</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/calm_escript/calm_escript.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019 Nutanix.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

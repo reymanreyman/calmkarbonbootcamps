@@ -1,0 +1,700 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Calm: Day 2 Operations</title>
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Calm: EScript and Task Library" href="../calm_escript/calm_escript.html" />
+    <link rel="prev" title="Calm: Windows Workloads" href="../calm_win/calm_win.html" />
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  </head><body>
+
+  <div id="navbar" class="navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html"><span><img src="../_static/NutanixWorkshops.svg"></span>
+           </a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html"> <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><p class="caption"><span class="caption-text">Calm</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../what_is_calm/what_is_calm.html">What Is Calm</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#what-is-the-state-of-things-today">What is the State of Things Today</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#managing-apps-is-increasingly-challenging">Managing Apps Is Increasingly Challenging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#how-does-nutanix-solve-this-problem">How Does Nutanix Solve This Problem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#foundation-for-enterprise-cloud">Foundation For Enterprise Cloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#delivering-the-enterprise-cloud-vision">Delivering the Enterprise Cloud Vision</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#delivering-the-enterprise-cloud-vision-multi-cloud">Delivering the Enterprise Cloud Vision: Multi-Cloud</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#calm-application-lifecycle-automation">Calm: Application Lifecycle Automation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#blueprints-capture-all-elements-of-the-application">Blueprints Capture All Elements of the Application</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#make-sense-of-complexity-in-a-visual-way">Make Sense of Complexity in a Visual Way</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#blueprints-are-flexible-and-open">Blueprints Are Flexible and Open</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#blueprints-are-used-for-lifecycle-management">Blueprints Are Used for Lifecycle Management</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#calm-self-service-and-governance">Calm: Self-Service and Governance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#nutanix-marketplace-empowers-self-service">Nutanix Marketplace Empowers Self-Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#deploy-in-one-click">Deploy in One-Click</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#end-to-end-audits-and-governance">End-to-End Audits and Governance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#calm-hybrid-cloud-management">Calm: Hybrid Cloud Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#hybrid-cloud-management">Hybrid Cloud Management</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#deploy-across-clouds-based-on-need">Deploy across Clouds Based on Need</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../what_is_calm/what_is_calm.html#automate-empower-relax">Automate. Empower. Relax</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../what_is_calm/what_is_calm.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_enable/calm_enable.html">Calm: Enable</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_enable/calm_enable.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_enable/calm_enable.html#enabling-app-management">Enabling App Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_enable/calm_enable.html#adding-active-directory">Adding Active Directory</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_projects/calm_projects.html">Calm: Projects</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_projects/calm_projects.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_projects/calm_projects.html#creating-a-project">Creating A Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_projects/calm_projects.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_linux/calm_linux.html">Calm: Linux Workloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-a-blueprint">Creating a Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-credentials">Creating Credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#defining-variables">Defining Variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#adding-a-downloadable-image">Adding a Downloadable Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-services">Creating Services</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-the-database-service">Creating the Database Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-the-web-server-service">Creating the Web Server Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_linux/calm_linux.html#creating-the-load-balancer-service">Creating the Load Balancer Service</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#adding-dependencies">Adding Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#launching-and-managing-the-application">Launching and Managing the Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_linux/calm_linux.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_win/calm_win.html">Calm: Windows Workloads</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#creating-the-blueprint">Creating the Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#adding-services">Adding Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#defining-package-install">Defining Package Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#launching-the-blueprint">Launching the Blueprint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#optional-scale-out-iis-tier">(Optional) Scale Out IIS Tier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#optional-managing-mssql-with-era">(Optional) Managing MSSQL with Era</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_win/calm_win.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Calm: Day 2 Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lab-setup">Lab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scaling-out">Scaling Out</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scaling-in">Scaling In</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upgrading">Upgrading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#launching-and-managing-the-application">Launching and Managing the Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-variable-scaling">(Optional) Variable Scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_escript/calm_escript.html">Calm: EScript and Task Library</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#lab-setup">Lab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#using-existing-machine-services">Using Existing Machine Services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#restlist-custom-action">RESTList Custom Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#getdefaultsubnet-custom-action">GetDefaultSubnet Custom Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#running-the-custom-actions">Running the Custom Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#publishing-to-the-task-library">Publishing to the Task Library</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_escript/calm_escript.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html">Calm: Marketplace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#calm-marketplace-part-1">Calm Marketplace Part 1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#publishing-blueprints-from-marketplace-manager">Publishing Blueprints from Marketplace Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#cloning-blueprints-from-marketplace">Cloning Blueprints from Marketplace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#editing-cloned-blueprint">Editing Cloned Blueprint</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#calm-marketplace-part-2">Calm Marketplace Part 2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#publishing-blueprints">Publishing Blueprints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#approving-blueprints">Approving Blueprints</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#configuring-project-environment">Configuring Project Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#launching-blueprint-from-the-marketplace">Launching Blueprint from the Marketplace</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Optional Labs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../flow_assign_categories_in_calm/flow_assign_categories_in_calm.html">Flow: Assign Categories inside Calm Blueprint (Optional)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../flow_assign_categories_in_calm/flow_assign_categories_in_calm.html#using-flow-with-calm">Using Flow with Calm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flow_assign_categories_in_calm/flow_assign_categories_in_calm.html#takeaways">Takeaways</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Karbon</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html">Windows Tools VM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html#deploying-tools-vm">Deploying Tools VM</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/index.html">Karbon</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../karbon/index.html#what-are-containers">What are Containers?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../karbon/index.html#container-benefits-and-issues">Container Benefits and Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../karbon/index.html#introducing-kubernetes">Introducing Kubernetes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#lab-setup">Lab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#creating-a-karbon-cluster">Creating a Karbon Cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#getting-started-with-kubectl">Getting Started with Kubectl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#deploying-an-application">Deploying an Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#accessing-wordpress">Accessing Wordpress</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#exploring-logging-visualization">Exploring Logging &amp; Visualization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#coming-soon">Coming Soon!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#takeaways">Takeaways</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../karbon/index.html#additional-kubernetes-training-resources">Additional Kubernetes Training Resources</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/windows_tools_vm.html">Windows Tools VM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/windows_tools_vm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/windows_tools_vm.html#deploying-tools-vm">Deploying Tools VM</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/linux_tools_vm.html">Linux Tools VM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/linux_tools_vm.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/linux_tools_vm.html#deploying-centos">Deploying CentOS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tools_vms/linux_tools_vm.html#verify-tools-install">Verify Tools Install</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+            
+            
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><p class="caption"><span class="caption-text">Calm</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../what_is_calm/what_is_calm.html">What Is Calm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_enable/calm_enable.html">Calm: Enable</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_projects/calm_projects.html">Calm: Projects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_linux/calm_linux.html">Calm: Linux Workloads</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_win/calm_win.html">Calm: Windows Workloads</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Calm: Day 2 Operations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#lab-setup">Lab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scaling-out">Scaling Out</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#scaling-in">Scaling In</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#upgrading">Upgrading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#launching-and-managing-the-application">Launching and Managing the Application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#optional-variable-scaling">(Optional) Variable Scaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#takeaways">Takeaways</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_escript/calm_escript.html">Calm: EScript and Task Library</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../calm_marketplace/calm_marketplace.html">Calm: Marketplace</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Optional Labs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../flow_assign_categories_in_calm/flow_assign_categories_in_calm.html">Flow: Assign Categories inside Calm Blueprint (Optional)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Karbon</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/tools_vms/windows_tools_vm.html">Windows Tools VM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../karbon/index.html">Karbon</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Appendix</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/windows_tools_vm.html">Windows Tools VM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools_vms/linux_tools_vm.html">Linux Tools VM</a></li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-9 content" role="main">
+      
+  <div class="section" id="calm-day-2-operations">
+<span id="calm-day2"></span><h1>Calm: Day 2 Operations<a class="headerlink" href="#calm-day-2-operations" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>In the <a class="reference internal" href="../calm_linux/calm_linux.html#calm-linux"><span class="std std-ref">Calm: Linux Workloads</span></a> and <a class="reference internal" href="../calm_win/calm_win.html#calm-win"><span class="std std-ref">Calm: Windows Workloads</span></a> labs you explored how Calm can be used to model and deploy complex applications using a blueprint. Calm, however, it capable of managing applications throughout their <strong>entire</strong> lifecycle.</p>
+<p><strong>In this lab you will implement custom actions within Calm to address “Day 2” operations, including scaling out, scaling in, and upgrading your application.</strong></p>
+</div>
+<div class="section" id="lab-setup">
+<h2>Lab Setup<a class="headerlink" href="#lab-setup" title="Permalink to this headline">¶</a></h2>
+<p>This lab depends on the availability of a multi-tier <strong>Task Manger</strong> web application implemented during the <a class="reference internal" href="../calm_linux/calm_linux.html#calm-linux"><span class="std std-ref">Calm: Linux Workloads</span></a> lab.</p>
+<p>If you already have basic Calm familiarity and have not completed the <a class="reference internal" href="../calm_linux/calm_linux.html#calm-linux"><span class="std std-ref">Calm: Linux Workloads</span></a> lab, please refer to the <span class="xref std std-ref">taskman</span> lab for instructions on importing the base <strong>Task Manager</strong> blueprint.</p>
+<p><strong>You do NOT need to launch the Task Manager blueprint once imported.</strong></p>
+</div>
+<div class="section" id="scaling-out">
+<h2>Scaling Out<a class="headerlink" href="#scaling-out" title="Permalink to this headline">¶</a></h2>
+<p>Imagine you’re the administrator of the Task Manager application that we’ve been building, and you’re currently unsure of the amount of demand for this application by your end users. Or, potentially, you expect the demand to ebb and flow due to the time of the year. How can we easily scale to meet this changing demand?</p>
+<p>During the creation of the Task Manager blueprint, the <strong>WebServer</strong> service was configured with a minimum number of 2 replicas, with a maximum of 4. As a result, Calm will create 2 WebServer VMs during the initial deployment. In the event the 2 replicas are not enough to handle the load of your end users, a <strong>Scale Out</strong> operation is required.</p>
+<ol class="arabic">
+<li><p class="first">In the <strong>Application Overview &gt; Application Profile</strong> section, expand the <strong>Default</strong> Application Profile.</p>
+<div class="figure">
+<img alt="../_images/510scaleout0.png" src="../_images/510scaleout0.png" />
+</div>
+</li>
+<li><p class="first">Select <em class="fa fa-plus-circle"></em> next to <strong>Actions</strong> to add a new, custom action.  On the <strong>Configuration Pane</strong> to the right, rename the new Action to be <strong>Scale Out</strong>.</p>
+<div class="figure">
+<img alt="../_images/510scaleout1.png" src="../_images/510scaleout1.png" />
+</div>
+</li>
+<li><p class="first">In the box <strong>below</strong> the <strong>WebServer</strong> service tile, click the <strong>+ Task</strong> button to add a scaling task, and fill out the following fields:</p>
+<ul class="simple">
+<li><strong>Task Name</strong> - web_scale_out</li>
+<li><strong>Scaling Type</strong> - Scale Out</li>
+<li><strong>Scaling Count</strong> - 1</li>
+</ul>
+<div class="figure">
+<img alt="../_images/510scaleout2.png" src="../_images/510scaleout2.png" />
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <strong>+ Task</strong> button that appears below the service tile is only used for scaling the number of replicas up and down, so it is important to select the correct option.</p>
+</div>
+<p>When a user later runs the <strong>Scale Out</strong> task, a new <strong>WebServer</strong> VM will get created, and the <strong>Package Install</strong> tasks for that service will be executed.  However, we do need to modify the <strong>HAProxy</strong> configuration in order to start taking advantage of this new web server.</p>
+</li>
+<li><p class="first"><strong>Within</strong> the <strong>HAProxy</strong> service tile, click the <strong>+ Task</strong> button, then fill out the following fields:</p>
+<ul class="simple">
+<li><strong>Task Name</strong> - add_webserver</li>
+<li><strong>Type</strong> - Execute</li>
+<li><strong>Script Type</strong> - Shell</li>
+<li><strong>Credential</strong> - CENTOS</li>
+</ul>
+</li>
+<li><p class="first">Copy and paste the following script into the <strong>Script</strong> field:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span> -ex
+
+<span class="nv">host</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;@@{WebServer.address}@@&quot;</span> <span class="p">|</span> awk -F <span class="s2">&quot;,&quot;</span> <span class="s1">&#39;{print $NF}&#39;</span><span class="k">)</span>
+<span class="nv">port</span><span class="o">=</span><span class="m">80</span>
+<span class="nb">echo</span> <span class="s2">&quot; server host-</span><span class="si">${</span><span class="nv">host</span><span class="si">}</span><span class="s2"> </span><span class="si">${</span><span class="nv">host</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">port</span><span class="si">}</span><span class="s2"> weight 1 maxconn 100 check&quot;</span> <span class="p">|</span> sudo tee -a /etc/haproxy/haproxy.cfg
+
+sudo systemctl daemon-reload
+sudo systemctl restart haproxy
+</pre></div>
+</div>
+<p>The script will parse the last IP address in the WebServer address array and append it to the haproxy.cfg file.  However, we want to be sure that this doesn’t happen until <strong>after</strong> the new WebServer is fully up, otherwise the HAProxy server may send requests to a non-functioning WebServer.</p>
+</li>
+<li><p class="first">To solve this issue, create an edge to force a dependency on the <strong>web_scale_out</strong> task completing prior to the <strong>add_webserver</strong> task.</p>
+<p>Your <strong>Workspace</strong> should now look like this:</p>
+<div class="figure">
+<img alt="../_images/510scaleout3.png" src="../_images/510scaleout3.png" />
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="scaling-in">
+<h2>Scaling In<a class="headerlink" href="#scaling-in" title="Permalink to this headline">¶</a></h2>
+<p>It’s the end of your busy season, and you’d like to optimize your resource utilization by scaling back the number of deployed Web Servers.</p>
+<ol class="arabic">
+<li><p class="first">Select <em class="fa fa-plus-circle"></em> to add a custom action named <strong>Scale In</strong> to the Default <strong>Application Profile</strong>.</p>
+<div class="figure">
+<img alt="../_images/510scalein1.png" src="../_images/510scalein1.png" />
+</div>
+</li>
+<li><p class="first"><strong>Below</strong> the <strong>WebServer</strong> service tile, click the <strong>+ Task</strong> button to add a scaling task, and fill out the following fields:</p>
+<ul class="simple">
+<li><strong>Task Name</strong> - web_scale_in</li>
+<li><strong>Scaling Type</strong> - Scale In</li>
+<li><strong>Scaling Count</strong> - 1</li>
+</ul>
+<div class="figure">
+<img alt="../_images/510scalein2.png" src="../_images/510scalein2.png" />
+</div>
+<p>When a user later runs the <strong>Scale In</strong> task, the last <strong>WebServer</strong> replica will have its <strong>Package Uninstall</strong> task run, the VM will be shut down, and then deleted, which will reclaim resources.  However, we do need to modify the <strong>HAProxy</strong> configuration to ensure that we’re no longer sending traffic to the to-be-deleted Web Server.</p>
+</li>
+<li><p class="first"><strong>Within</strong> the <strong>HAProxy</strong> service tile, click the <strong>+ Task</strong> button, then fill out the following fields:</p>
+<ul class="simple">
+<li><strong>Task Name</strong> - del_webserver</li>
+<li><strong>Type</strong> - Execute</li>
+<li><strong>Script Type</strong> - Shell</li>
+<li><strong>Credential</strong> - CENTOS</li>
+</ul>
+</li>
+<li><p class="first">Copy and paste the following script into the <strong>Script</strong> field:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span> -ex
+
+<span class="nv">host</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&quot;@@{WebServer.address}@@&quot;</span> <span class="p">|</span> awk -F <span class="s2">&quot;,&quot;</span> <span class="s1">&#39;{print $NF}&#39;</span><span class="k">)</span>
+sudo sed -i <span class="s2">&quot;/</span><span class="nv">$host</span><span class="s2">/d&quot;</span> /etc/haproxy/haproxy.cfg
+
+sudo systemctl daemon-reload
+sudo systemctl restart haproxy
+</pre></div>
+</div>
+<p>Similar to the scale out script, this script will parse the last IP in the WebServer address array and use the <a class="reference external" href="http://www.grymoire.com/Unix/Sed.html">sed</a> command to remove the corresponding entry from haproxy.cfg.</p>
+<p>Again, similar to the scale out script, we want to ensure requests stop being sent to the VM <strong>before</strong> it is removed.</p>
+</li>
+<li><p class="first">To solve this issue, create an edge to force a dependency on the <strong>del_webserver</strong> task completing prior to the <strong>web_scale_in</strong> task.</p>
+<p>Your <strong>Workspace</strong> should now look like this:</p>
+<div class="figure">
+<img alt="../_images/510scalein3.png" src="../_images/510scalein3.png" />
+</div>
+</li>
+<li><p class="first">Click <strong>Save</strong> and ensure no errors or warnings pop-up. If they do, resolve the issue, and <strong>Save</strong> again.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="upgrading">
+<h2>Upgrading<a class="headerlink" href="#upgrading" title="Permalink to this headline">¶</a></h2>
+<p>Your company has a mandate to keep all application code up to date, to help minimize security vulnerabilities. Your company also has a strict change control process, meaning you can only update your application during the weekend. You currently spend a significant portion of your time on one Saturday every month completing application update procedures during a maintenance window. Let’s look at how you can reclaim your weekend by modeling the application upgrade with Calm.</p>
+<ol class="arabic">
+<li><p class="first">Select <em class="fa fa-plus-circle"></em> to add a custom action named <strong>Upgrade</strong> to the Default <strong>Application Profile</strong>.</p>
+<p>The first thing we’re going to need to do is to stop the respective processes on each of our Services.</p>
+</li>
+<li><p class="first"><strong>Within each</strong> of our 3 Services, click the <strong>+ Task</strong> button to add a new task, and fill in the following information:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="32%" />
+<col width="19%" />
+<col width="26%" />
+<col width="23%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Service Name</strong></td>
+<td>MySQL</td>
+<td>WebServer</td>
+<td>HAProxy</td>
+</tr>
+<tr class="row-even"><td><strong>Task Name</strong></td>
+<td>StopMySQL</td>
+<td>StopWebServer</td>
+<td>StopHAProxy</td>
+</tr>
+<tr class="row-odd"><td><strong>Type</strong></td>
+<td>Execute</td>
+<td>Execute</td>
+<td>Execute</td>
+</tr>
+<tr class="row-even"><td><strong>Script Type</strong></td>
+<td>Shell</td>
+<td>Shell</td>
+<td>Shell</td>
+</tr>
+<tr class="row-odd"><td><strong>Credential</strong></td>
+<td>CENTOS</td>
+<td>CENTOS</td>
+<td>CENTOS</td>
+</tr>
+<tr class="row-even"><td><strong>Script</strong></td>
+<td>See Below</td>
+<td>See Below</td>
+<td>See Below</td>
+</tr>
+</tbody>
+</table>
+<p><strong>StopMySQL Script:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span> -ex
+
+sudo systemctl stop mysqld
+</pre></div>
+</div>
+<p><strong>StopWebServer Script:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span> -ex
+
+sudo systemctl stop php-fpm
+sudo systemctl stop nginx
+</pre></div>
+</div>
+<p><strong>StopHAProxy Script:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span> -ex
+
+sudo systemctl stop haproxy
+</pre></div>
+</div>
+<p>Once complete, your <strong>Workspace</strong> should look like this:</p>
+<div class="figure">
+<img alt="../_images/upgrade1.png" src="../_images/upgrade1.png" />
+</div>
+<p>Similar to both scaling and initial deployment operations, we do not want to get into a situation where the WebServer goes down before the HAProxy, nor do we want the MySQL database to go down before the WebServers.</p>
+</li>
+<li><p class="first">Create edges between services such that HAProxy stops before WebServers, and all WebServers stop before MySQL:</p>
+<div class="figure">
+<img alt="../_images/upgrade2.png" src="../_images/upgrade2.png" />
+</div>
+<p>Now that our critical services are stopped, we’ll want to perform our updates.</p>
+</li>
+<li><p class="first">Again, <strong>within each</strong> Service, add a new Task.  All of the 3 tasks are identical other than the name:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="21%" />
+<col width="27%" />
+<col width="24%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Service Name</strong></td>
+<td>MySQL</td>
+<td>WebServer</td>
+<td>HAProxy</td>
+</tr>
+<tr class="row-even"><td><strong>Task Name</strong></td>
+<td>UpgradeMySQL</td>
+<td>UpgradeWebServer</td>
+<td>UpgradeHAProxy</td>
+</tr>
+<tr class="row-odd"><td><strong>Type</strong></td>
+<td>Execute</td>
+<td>Execute</td>
+<td>Execute</td>
+</tr>
+<tr class="row-even"><td><strong>Script Type</strong></td>
+<td>Shell</td>
+<td>Shell</td>
+<td>Shell</td>
+</tr>
+<tr class="row-odd"><td><strong>Credential</strong></td>
+<td>CENTOS</td>
+<td>CENTOS</td>
+<td>CENTOS</td>
+</tr>
+<tr class="row-even"><td><strong>Script</strong></td>
+<td>See Below</td>
+<td>See Below</td>
+<td>See Below</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Script for all 3 Upgrade Tasks:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span> -ex
+
+sudo yum update -y
+</pre></div>
+</div>
+<p>This script will use the Red Hat/CentOS package management tool, <a class="reference external" href="https://access.redhat.com/solutions/9934">yum</a> to search for and install updates to all installed packages.</p>
+<p>Your <strong>Workspace</strong> should now look like this:</p>
+<div class="figure">
+<img alt="../_images/upgrade3.png" src="../_images/upgrade3.png" />
+</div>
+<p>From an a task ordering perspective, do we need to draw any orchestration edges? Notice in the screenshot above that Calm automatically draws and edge from the <strong>Stop</strong> task to the <strong>Upgrade</strong> task, which is good as that’s required. However, do we need any side to side dependencies?</p>
+<p>If you said “no”, you’re correct. The critical components are starting and stopping of the Services, there’s no reason to have each Service upgrade one at a time.</p>
+<p>Unless you specify otherwise, Calm will always run tasks in parallel to save time.</p>
+<p>Now that our Services have been upgraded, it’s time to start them.</p>
+</li>
+<li><p class="first">Again, we’ll add a Task <strong>within each</strong> Service, with the following values:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="21%" />
+<col width="27%" />
+<col width="24%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>Service Name</strong></td>
+<td>MySQL</td>
+<td>WebServer</td>
+<td>HAProxy</td>
+</tr>
+<tr class="row-even"><td><strong>Task Name</strong></td>
+<td>StartMySQL</td>
+<td>StartWebServer</td>
+<td>StartHAProxy</td>
+</tr>
+<tr class="row-odd"><td><strong>Type</strong></td>
+<td>Execute</td>
+<td>Execute</td>
+<td>Execute</td>
+</tr>
+<tr class="row-even"><td><strong>Script Type</strong></td>
+<td>Shell</td>
+<td>Shell</td>
+<td>Shell</td>
+</tr>
+<tr class="row-odd"><td><strong>Credential</strong></td>
+<td>CENTOS</td>
+<td>CENTOS</td>
+<td>CENTOS</td>
+</tr>
+<tr class="row-even"><td><strong>Script</strong></td>
+<td>See Below</td>
+<td>See Below</td>
+<td>See Below</td>
+</tr>
+</tbody>
+</table>
+<p><strong>StartMySQL Script:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span> -ex
+
+sudo systemctl start mysqld
+</pre></div>
+</div>
+<p><strong>StartWebServer Script:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span> -ex
+
+sudo systemctl start php-fpm
+sudo systemctl start nginx
+</pre></div>
+</div>
+<p><strong>StartHAProxy Script:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="nb">set</span> -ex
+
+sudo systemctl start haproxy
+</pre></div>
+</div>
+<p>Your <strong>Workspace</strong> should now look like this:</p>
+<div class="figure">
+<img alt="../_images/upgrade4.png" src="../_images/upgrade4.png" />
+</div>
+<p>This time, we <strong>DO</strong> require additional orchestration edges. As previously discussed, we would not want our HAProxy service up before our WebServers, or our WebServers up before our MySQL database.</p>
+</li>
+<li><p class="first">Create orchestration edges starting with MySQL, then the WebServers, and lastly the HAProxy:</p>
+<div class="figure">
+<img alt="../_images/upgrade5.png" src="../_images/upgrade5.png" />
+</div>
+</li>
+<li><p class="first">Click <strong>Save</strong> and ensure no errors or warnings pop-up.  If they do, resolve the issue, and <strong>Save</strong> again.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="launching-and-managing-the-application">
+<h2>Launching and Managing the Application<a class="headerlink" href="#launching-and-managing-the-application" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">From the upper toolbar in the Blueprint Editor, click <strong>Launch</strong>.</p>
+</li>
+<li><p class="first">Specify a unique <strong>Application Name</strong> (e.g. <em>Initials</em>-CalmLinuxIntro1) and your <strong>User_initials</strong> Runtime variable value for VM naming.</p>
+</li>
+<li><p class="first">Click <strong>Create</strong>.</p>
+</li>
+<li><p class="first">Once the application reaches a <strong>Running</strong> status, navigate to the <strong>Manage</strong> tab, and run the <strong>Scale Out</strong> action.</p>
+<p>Changes to the application can be monitored on the <strong>Audit</strong> tab.</p>
+<p>Once the scaling operation has completed, you can log into the HAProxy VM and verify the new Web Server has been added to <code class="docutils literal notranslate"><span class="pre">/etc/haproxy/haproxy.cfg</span></code>.</p>
+</li>
+<li><p class="first">Run the <strong>Upgrade</strong> action to update each service.</p>
+</li>
+<li><p class="first">Finally, run the <strong>Scale In</strong> action to remove the additional Web Server VM.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="optional-variable-scaling">
+<h2>(Optional) Variable Scaling<a class="headerlink" href="#optional-variable-scaling" title="Permalink to this headline">¶</a></h2>
+<p>In this lab you configured scaling operations that expanded or shrank the WebServer service array by a single VM.</p>
+<p>When creating a new custom action, additional variables can be defined in the Configuration Pane specific to that action.</p>
+<div class="figure">
+<img alt="../_images/optional1.png" src="../_images/optional1.png" />
+</div>
+<p>Leveraging a runtime variable, can you modify the scale out or scale in actions to perform a variable scaling operation?</p>
+<p>This will require some bash scripting experience to ensure the appropriate number of entries are being added and/or removed from the haproxy.cfg file.</p>
+</div>
+<div class="section" id="takeaways">
+<h2>Takeaways<a class="headerlink" href="#takeaways" title="Permalink to this headline">¶</a></h2>
+<p>What are the key things you should know about <strong>Nutanix Calm</strong>?</p>
+<ul class="simple">
+<li>Not only can Calm orchestrate complex application deployments, it can manage applications throughout their entire lifecycle, by modeling complex Day 2 operations.</li>
+<li>Whether it’s a built in task, like scaling, or a custom task, like upgrades, Calm can be directed to perform the operations in specific order, or if order doesn’t matter, perform them in parallel to save on time.</li>
+<li>What operation are you currently doing on a regular basis?  It’s likely that it can be modeled in Calm, saving you countless hours.  Take back your weekend!</li>
+</ul>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+        <br/>
+        
+<div id="sourcelink">
+  <a href="../_sources/calm_day2/calm_day2.rst.txt"
+     rel="nofollow">Source</a>
+</div>
+      
+    </p>
+    <p>
+        &copy; Copyright 2019 Nutanix.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
